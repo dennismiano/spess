@@ -1,3 +1,10 @@
+/***********************HOUSE KEEPING***********************************************/
+.blue{
+	color:#58D3F7;
+}
+.red{
+	color:#FF4000;
+}
 .spess-header{
 	border-top:7px solid #00d8ff;
 	border-bottom:1px solid #ebebeb;
@@ -7,6 +14,7 @@
 	position: fixed;
 	width: 100%;
 	background-color: #ffffff;
+	z-index: 999;
 }
 .spess-heroslider{	
 	/*background-image: url("/images/syde-images/images/hero-image.jpg");*/
@@ -18,19 +26,37 @@
 	padding-top: 200px;
 	margin-top: 0px;
 }
+.spess-heroslider h2{
+	font-family: 'Signika', sans-serif;
+	color:#cccccc;
+	font-weight: 600;
+}
+.spess-heroslider h1{
+	font-family: 'Montserrat', sans-serif;
+}
 .services{
-	padding-top: 30px;
+	padding-top: 50px;
+	padding-bottom: 30px;
 }
 .services h1{
 	text-align: center;
+	font-family: 'Signika', sans-serif;
+	font-weight:600;
+	padding-bottom: 10px;
 }
 .services h4{
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.services p{
+	font-family: 'Signika', sans-serif;
+	color:#333;
+	font-weight: 400;
 }
 .service-wrapper{
 	background-color: #ebebeb;
 	border-top:7px solid #cccccc;
-	padding:20px 10px 20px 10px;
+	padding:20px 20px 20px 20px;
 	margin-bottom: 20px;
 }
 .service-wrapper img{
@@ -43,4 +69,5 @@
 .about-us{
 	padding-top: 30px;
 	padding-bottom: 30px;
+	background-color: #ebebeb;
 }

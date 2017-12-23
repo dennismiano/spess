@@ -8,7 +8,9 @@
         <title>SPESS Rental Services</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
+
+
         <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">      
     </head>
@@ -27,7 +29,7 @@
             <div class="row">
                 <div class="spess-heroslider">
                     <div class="container">
-                        <h3>Logistical Services</h3>
+                        <h2>Logistical Services</h2>
                         <h1>SMALL AND LARGE <br>TRUCKS FOR HIRE</h1>
                     </div>
                 </div>
@@ -37,7 +39,7 @@
                 <div class="container">
                     <div class="services">
                         <div class="row">
-                            <h1>Our Services</h1>
+                            <h1><span class="blue"> Our</span><span class="red"> Services</span></h1>
 
                             <div class="col-md-4">
                                 <div class="service-wrapper">
@@ -68,19 +70,28 @@
             </div>
 
             <div class="row">
-                <div class="container">
-                    <div class="about-us">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h1>About Us</h1>
-                                <p>SPESS Rental services Ltd is a privately held Limited liability company that was established  in January 2014 with a goal to provide excellent result by providing top quality supplies and reliable integrated services that meets our client`s needs. We dedicate ourselves to be a customer focused company that provides the best in products and services to our customers in Eastern Africa and global at large.</p>
-                            </div>
+                <div class="about-us">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h1>About Us</h1>
+                                        <p>SPESS Rental services Ltd is a privately held Limited liability company that was established  in January 2014 with a goal to provide excellent result by providing top quality supplies and reliable integrated services that meets our client`s needs. We dedicate ourselves to be a customer focused company that provides the best in products and services to our customers in Eastern Africa and global at large.</p>
+                                    </div>
 
-                            <div class="col-md-6">
-                                <p>Check</p>
-                            </div>
+                                    <div class="col-md-6">
+                                        <h3>VISION</h3>
+                                        <p>To be the world leader in provision of equipment and related services, by doing this we will earn our client`s enthusiasm through continuous improvement driven by the integrity, teamwork and innovation of spess people to be a company that our shareholders and society want.</p>
+
+                                        <h3>MISSION</h3>
+                                        <p>We strive to set, by example the standards for excellence and ethics in our industry, by pledging ourselves to seek continuous improvement through team effort, to do “whatever it takes” to deliver exceptional performance for our customers</p>
+
+                                        <h3>VALUES</h3>
+                                        <p>SPESS operation is guided by the following values;
+                                        <li>Quality - We strive at providing quality supplies and services that will earn our client`s enthusiasm.
+                                        </li></p>
+                                    </div>
+                                </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
