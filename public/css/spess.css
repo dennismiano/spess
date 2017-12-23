@@ -1,0 +1,46 @@
+.spess-header{
+	border-top:7px solid #00d8ff;
+	border-bottom:1px solid #ebebeb;
+	-webkit-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
+	-moz-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
+	box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
+	position: fixed;
+	width: 100%;
+	background-color: #ffffff;
+}
+.spess-heroslider{	
+	/*background-image: url("/images/syde-images/images/hero-image.jpg");*/
+	background-image: url("/images/hero-image1.jpg");
+	height:600px;
+	background-size: cover;
+	background-position: center;
+	overflow:hidden;
+	padding-top: 200px;
+	margin-top: 0px;
+}
+.services{
+	padding-top: 30px;
+}
+.services h1{
+	text-align: center;
+}
+.services h4{
+	text-align: center;
+}
+.service-wrapper{
+	background-color: #ebebeb;
+	border-top:7px solid #cccccc;
+	padding:20px 10px 20px 10px;
+	margin-bottom: 20px;
+}
+.service-wrapper img{
+	display: block;
+	margin:0 auto;
+	max-width: 130px;
+	height: auto;
+}
+
+.about-us{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
