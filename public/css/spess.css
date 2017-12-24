@@ -5,6 +5,11 @@
 .red{
 	color:#FF4000;
 }
+.spess-text{
+	font-family: 'Signika', sans-serif;
+	font-weight:300;
+	font-size: 14pt;
+}
 .spess-header{
 	border-top:7px solid #00d8ff;
 	border-bottom:1px solid #ebebeb;
@@ -50,8 +55,8 @@
 }
 .services p{
 	font-family: 'Signika', sans-serif;
-	color:#333;
-	font-weight: 400;
+	font-weight:300;
+	font-size: 14pt;
 }
 .service-wrapper{
 	background-color: #ebebeb;
@@ -67,7 +72,77 @@
 }
 
 .about-us{
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	background-color: #ebebeb;
+}
+.about-us h1{
+	font-family: 'Signika', sans-serif;
+	font-weight: 600;
+}
+.about-us h4{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	margin:0;
+	padding-top: 15px;
+}
+.about-us p{
+	font-family: 'Signika', sans-serif;
+	font-weight:300;
+	font-size: 14pt;
+}
+.about-us-text{
+	font-family: 'Signika', sans-serif;
+	font-weight: 400;
+	font-size: 20pt;
+}
+.aboutus-wrapper{
+	padding-right:30px;
+}
+.client-testimony{
+	padding-top: 50px;
+	padding-bottom:50px;
+}
+.client-testimony h1{
+	text-align: center;
+	font-family: 'Signika', sans-serif;
+	font-weight: 600;
+}
+.testimony{
+	background-color: #ebebeb;
+	padding:30px 30px;
+}
+.testimony h4{
+	font-family: 'Signika', sans-serif;
+	font-weight: 300;
+	text-align: center;
+}
+.testimony-speechmark{
+	max-width: 70px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	padding-top: 15px;
+}
+.footer{
+	background-color: #ebebeb;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.footer h1{
+	font-family: 'Signika', sans-serif;
+	font-weight:600;
+}
+.footer h4{
+	font-family: 'Signika', sans-serif;
+	font-weight:600;
+	font-size: 18pt;
+}
+.footer p{
+	font-family: 'Signika', sans-serif;
+	font-weight:400;
+	font-size: 14pt;
+}
+.contacts-wrapper{
+	padding-top:15px;
 }
