@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('logistics', function () {
+    return view('logistics');
+});

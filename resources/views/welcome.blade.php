@@ -32,6 +32,14 @@
                 <div class="spess-header">
                     <div class="container">
                         <a class="" href="/home" > <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
+
+                        <ul class="menu pull-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="logistics">Logistics Services</a></li>
+                            <li><a href="#">Plant Machinery</a></li>
+                            <li><a href="#">Protective Equipment</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

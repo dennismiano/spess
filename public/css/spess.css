@@ -8,7 +8,7 @@
 .spess-text{
 	font-family: 'Signika', sans-serif;
 	font-weight:300;
-	font-size: 14pt;
+	font-size: 13pt;
 }
 .bold{
 	font-weight: 600;
@@ -24,10 +24,31 @@
 	background-color: #ffffff;
 	z-index: 999;
 }
+.menu{
+	list-style: none;
+	padding-top: 20px;
+}
+.menu li{
+	float:left;
+	font-family: 'Signika', sans-serif;
+	font-size: 13pt;
+	padding-right: 20px;
+	font-weight: 300pt;
+
+}
+.menu li a{
+	color:#58D3F7;
+}
+.menu li a:active{
+	color:#FF4000;
+}
+.menu li a:hover{
+	color:#FF4000;
+}
 .spess-heroslider{	
 	/*background-image: url("/images/syde-images/images/hero-image.jpg");*/
 	background-size: cover;
-	background-position: center;
+	background-position: bottom right;
 	overflow:hidden;
 	margin-top: 0px;
 }
@@ -66,7 +87,7 @@
 .services p{
 	font-family: 'Signika', sans-serif;
 	font-weight:300;
-	font-size: 14pt;
+	font-size: 13pt;
 }
 .service-wrapper{
 	background-color: #ebebeb;
@@ -100,7 +121,7 @@
 .about-us p{
 	font-family: 'Signika', sans-serif;
 	font-weight:300;
-	font-size: 14pt;
+	font-size: 13pt;
 	line-height: 1.2;
 }
 .about-us-text{
@@ -167,7 +188,7 @@
 .footer p{
 	font-family: 'Signika', sans-serif;
 	font-weight:400;
-	font-size: 14pt;
+	font-size: 13pt;
 }
 #map{
 	width: 100%;
@@ -175,4 +196,30 @@
 }
 .contacts-wrapper{
 	padding-top:15px;
+}
+
+/***********************************PAGES STYLING********************************/
+.pages-header{
+	background-image: url("/images/header-logistics.jpg");
+	height:300px;
+	padding-top: 100px;
+}
+.pages-header h1{
+	font-family: 'Signika', sans-serif;
+	color:#fff;
+	font-weight: 600;
+}
+.pages-content{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.pages-content h1{
+		font-family: 'Signika', sans-serif;
+		font-weight: 600;
+		color:#8d8d8d;
+}
+.pages-content p{
+	font-family: 'Signika', sans-serif;
+	font-weight:300;
+	font-size: 13pt;
 }
