@@ -20,6 +20,7 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+		<script src="{{ URL::asset('/js/user/user.js')}}"></script>
         <script src="{{ URL::asset('/js/popup.js')}}"></script>
         <script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
         <script src="{{ URL::asset('/js/slick.js')}}"></script>
@@ -31,7 +32,7 @@
             <div class="row">
                 <div class="spess-header">
                     <div class="container">
-                        <a class="" href="/home" > <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
+                        <a class="load_ajax" href="/" cl="services"> <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
                     </div>
                 </div>
             </div>
