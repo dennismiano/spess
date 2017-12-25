@@ -1,32 +1,4 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>SPESS Rental Services</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
-
-
-        <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-        <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
-        <link href="{{ URL::asset('/css/slick.css')}}" rel="stylesheet">
-        <link href="{{ URL::asset('/css/popup.css')}}" rel="stylesheet">
-
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-        <script src="{{ URL::asset('/js/popup.js')}}"></script>
-        <script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
-        <script src="{{ URL::asset('/js/slick.js')}}"></script>
-        <script src="{{ URL::asset('/js/bootstrap.bundle.js')}}"></script>    
-    </head>
-
-    <body>
         <div class="container-fluid">
             <div class="row">
                 <div class="spess-header">
@@ -191,7 +163,3 @@
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM4nUO7TbbgthUAw__ApRCsWY57cqv6Ls&callback=initMap">
         </script>
-
-
-    </body>
-</html>

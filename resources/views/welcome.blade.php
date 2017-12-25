@@ -20,6 +20,7 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+		<script src="{{ URL::asset('/js/user/user.js')}}"></script>
         <script src="{{ URL::asset('/js/popup.js')}}"></script>
         <script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
         <script src="{{ URL::asset('/js/slick.js')}}"></script>
@@ -31,11 +32,11 @@
             <div class="row">
                 <div class="spess-header">
                     <div class="container">
-                        <a class="" href="/home" > <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
+                        <a class="load_ajax" href="/" cl="services"> <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
 
                         <ul class="menu pull-right">
                             <li><a href="#">Home</a></li>
-                            <li><a href="logistics">Logistics Services</a></li>
+                            <li><a href="logistics" cl="content-load">Logistics Services</a></li>
                             <li><a href="#">Plant Machinery</a></li>
                             <li><a href="#">Protective Equipment</a></li>
                             <li><a href="#">Blog</a></li>
@@ -91,7 +92,7 @@
                         </div>
                 </div>
 <!--END OF ORDER FORM-->
-
+<div class="content-load">
             <div class="row">
                 <div class="spess-heroslider">
                     <div class="spess-heroslider1" style="background-image: url('/images/hero-image1.jpg');height:600px;">
@@ -282,6 +283,7 @@
             </div>
 
         </div>
+    </div>
 
         <script type="text/javascript">
                 $('.spess-heroslider').slick({
