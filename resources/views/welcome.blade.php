@@ -254,25 +254,25 @@
                                     </div>
 
                                     <div class="footer-form-body">
-                                         <form class="project_fm">
+                                         <form class="msg_form">
                                          {{csrf_field()}}
                                           <div class="form-group">
-                                            <input type="text" class="form-control no-border form-text" id="project-category" placeholder="Your Name?" name="about">
+                                            <input type="text" class="form-control no-border form-text" id="project-category" placeholder="Your Name?" name="name">
                                           </div>
                                           
                                           <div class="form-group">
-                                            <input type="text" class="form-control no-border form-text"  placeholder="Phone number?" name="budget">
+                                            <input type="text" class="form-control no-border form-text"  placeholder="Phone number?" name="phone">
                                           </div>
                                           
                                           <div class="form-group">
-                                            <input type="text" class="form-control no-border form-text"  placeholder="Email?" name="deadline">
+                                            <input type="email" class="form-control no-border form-text"  placeholder="Email?" name="email">
                                           </div>
 
                                           <div class="form-group proj_update">
-                                            <textarea class="form-control form-text" rows="4" placeholder="Your Message" name="phone"></textarea>
+                                            <textarea class="form-control form-text" rows="4" placeholder="Your Message" name="msg"></textarea>
                                           </div>
 
-                                          <button type="button" class="subscribe-button form-text">Submit <i class="fa fa-paper-plane"></i></button>
+                                          <button type="submit" class="subscribe-button form-text">Submit <i class="fa fa-paper-plane"></i></button>
                                         </form>
                                     </div>
                                 </div>

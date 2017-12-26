@@ -9,24 +9,34 @@ class msg extends Controller
 {
     //create msg
 	public function create_msg(Request $request,message $message){
-		$det=[
-		 "name"=>$Request->name;
-		 "email"=>$Request->email;
-		 "message"=>$Request->msg;
-		 
-		 ];
-		$msgs=$message::create($det);
-		if($msgs){
-			return "message sent";
+		if($request->isMethod("POST")  ){
+				$det=[
+			 "name"=>$request->name,
+			 "email"=>$request->email,
+			 "phone"=>$request->phone,
+			 "message"=>$request->msg
+			 
+			 ];
+			$msgs=$message::create($det);
+			if($msgs){
+				return "message sent";
+			}
+			else{
+				return "An error occured in sending your message";
+			}
+			
+			
 		}
 		else{
-			return "An error occured in sending your message";
+			return abort(404);
+			
 		}
+		
 		
 	}
 	//view msg
 	public function view_msg(  message $message ){
-		$msgs=$message::orderBy('creataed_at','desc')->SimplePaginate(5);
+		$msgs=$message::orderBy('created_at','desc')->SimplePaginate(5);
 		return view("msg.view",["msg"=>$msgs]);
 		
 		

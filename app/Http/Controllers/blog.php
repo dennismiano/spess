@@ -23,7 +23,7 @@ class blog extends Controller
 		
 	}
 	//return all posts
-	public function view_post(){
+	public function view_post (){
 		
 	}
 	

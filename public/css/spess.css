@@ -238,7 +238,10 @@
 	padding:10px 10px 20px 10px;
 	margin-bottom: 20px;
 }
-
+.service-thumbnail{
+	width:100%;
+	height:auto;
+}
 /***********************************MACHINERY RENTALS*********************************/
 .machinery-header{
 	background-image: url("/images/header-machinery.jpg");

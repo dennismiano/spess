@@ -1,5 +1,5 @@
 <div>
-@if( isset($msg) && $orders->isNotEmpty($msg))
+@if( isset($msg) && $msg->isNotEmpty($msg))
 	@foreach( $msg as $value ) 
      {{$value->created_at->diffForHumans() }}<br>
 	 {{$value->name}}<br>
