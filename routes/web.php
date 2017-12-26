@@ -14,6 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('logistics', function () {
+    return view('logistics');
+});
+Route::get('machinery', function () {
+    return view('machinery');
+});
+Route::get('protective-equipment', function () {
+    return view('ppe');
+});
 //create msg
 Route::post('/new/message', 'msg@create_msg');
 //view msg

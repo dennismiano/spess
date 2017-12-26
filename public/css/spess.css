@@ -208,6 +208,7 @@
 	font-family: 'Signika', sans-serif;
 	color:#fff;
 	font-weight: 600;
+	padding-top: 20px;
 }
 .pages-content{
 	padding-top: 50px;
@@ -222,4 +223,45 @@
 	font-family: 'Signika', sans-serif;
 	font-weight:300;
 	font-size: 13pt;
+}
+.form-header{
+	background-color: #dddddd;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom:4px solid #58D3F7;
+	padding:10px 10px 5px 10px;
+}
+.form-body{
+	background-color: #f2f2f2;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding:10px 10px 20px 10px;
+	margin-bottom: 20px;
+}
+
+/***********************************MACHINERY RENTALS*********************************/
+.machinery-header{
+	background-image: url("/images/header-machinery.jpg");
+	height:300px;
+	padding-top: 100px;
+}
+
+.machinery-header h1{
+	font-family: 'Signika', sans-serif;
+	color:#fff;
+	font-weight: 600;
+	padding-top: 20px;
+}
+
+/***********************************PPE*********************************/
+.ppe-header{
+	background-image: url("/images/header-ppe.jpg");
+	height:300px;
+	padding-top: 100px;
+}
+.ppe-header h1{
+	font-family: 'Signika', sans-serif;
+	color:#fff;
+	font-weight: 600;
+	padding-top: 20px;
 }

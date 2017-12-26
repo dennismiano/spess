@@ -35,10 +35,10 @@
                         <a class="load_ajax" href="/" cl="services"> <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
 
                         <ul class="menu pull-right">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="logistics" cl="content-load">Logistics Services</a></li>
-                            <li><a href="#">Plant Machinery</a></li>
-                            <li><a href="#">Protective Equipment</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="logistics" class="load_ajax" cl="content-load">Logistics Services</a></li>
+                            <li><a href="machinery" class="load_ajax" cl="content-load">Plant Machinery</a></li>
+                            <li><a href="protective-equipment" class="load_ajax" cl="content-load">Protective Equipment</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
@@ -227,7 +227,7 @@
                     </div>
                 </div>
             </div>
-
+    </div>
             <div class="row">
                 <div class="footer">
                     <div class="container">
@@ -281,8 +281,6 @@
                     </div>
                 </div>
             </div>
-
-        </div>
     </div>
 
         <script type="text/javascript">
