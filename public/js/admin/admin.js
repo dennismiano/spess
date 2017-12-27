@@ -22,8 +22,9 @@ $(document).ready( function(){
 	$("body").on("click",".load_ajax",function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
-		var ur=$(this).attr("href");
-		var cla=$("."+$(this).attr("cl") );
+		$(this).each(function(){
+			   var ur=$(this).attr("href");
+			var cla=$("."+$(this).attr("cl") );
 		$.ajax({
 			async:true,
 			type:"GET",
@@ -35,9 +36,52 @@ $(document).ready( function(){
 			}
 			
 			
-		});
+		   });
+		}   );
 		
 	}   );
+	
+	//del msg
+	$("body").on("click",".del_msg",  function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		 $(this).each( function(){
+			 //alert("data");
+			 var mid=$(this).attr("id");
+					$.ajax({
+				async:true,
+				type:"GET",
+				url:"/del/message/"+mid,
+				success:function(data){
+					//cla.empty().html(data);
+					alert(data);
+					
+				}
+				
+				
+			   });
+		 }   );
+	} );
+	//del orders
+	$("body").on("click",".del_order",  function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var di=$(this).attr("id");
+		  	$.ajax({
+				async:true,
+				type:"GET",
+				url:"/del/order/"+di,
+				success:function(data){
+					//cla.empty().html(data);
+					alert(data);
+					
+				}
+				
+				
+			   });
+		 
+	} );
+
 	
 	
 	

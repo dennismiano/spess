@@ -4,10 +4,12 @@
      {{$value->created_at->diffForHumans() }}<br>
 	 {{$value->name}}<br>
 	 {{$value->email}}<br>
-	 {{$value->message}}<br>{{$value->name}}<br>
+	 {{$value->message}}<br>
+	 {{$value->phone}}<br>
+	 <button tyepe="button" id="{{$value->id}}" class="del_msg">Delete</button>
     @endforeach
 @else
-	<p>No orders to display</p>
+	<p>No messages to display</p>
 @endif
 
 </div>

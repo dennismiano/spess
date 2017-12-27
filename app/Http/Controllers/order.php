@@ -9,7 +9,13 @@ class order extends Controller
 {
     //create orders
 	public function create_order( Request $request,  orders $orders ){
-		$det=[];
+		$det=[
+		 "name"=>$request->name,
+		 "phone"=>$request->ph,
+		 "email"=>$request->em,
+		 "service"=>$request->serv
+			  
+		];
 		$or=$orders::create($det);
 		if($or){
 			return "order created successfully";

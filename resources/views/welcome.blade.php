@@ -10,16 +10,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
 
-
+        <script src="/js/jquery-3.2.1.min.js"></script>
         <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/slick.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/popup.css')}}" rel="stylesheet">
 
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+       
 		<script src="{{ URL::asset('/js/user/user.js')}}"></script>
         <script src="{{ URL::asset('/js/popup.js')}}"></script>
         <script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
@@ -47,11 +44,11 @@
                                 <div class="row hid">
                                 </div>
 
-                                <div class="row more-form-body pe hid">
-                                     <form class="project_fm">
+                                <div class="row more-form-body ">
+                                     <form class="op">
                                      {{csrf_field()}}
                                       <div class="form-group">
-                                       <select type="text" class="form-control" name="">
+                                       <select type="text" class="form-control" name="serv">
                                          <option>--Which service would you like us to quote for</option>
                                          <option>Heavy equipment transportion</option>
                                          <option>General & Specialized construction equipment</option>
@@ -61,15 +58,15 @@
                                       </div>
                                       
                                       <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="your name" name="">
+                                        <input type="text" class="form-control"  placeholder="your name" name="name">
                                       </div>
                                       
                                       <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="your email" name="">
+                                        <input type="email" class="form-control" placeholder="your email" name="em">
                                       </div>
 
                                       <div class="form-group "  >
-                                        <input type="text" class="form-control"  placeholder="mobile number" name="">
+                                        <input type="text" class="form-control"  placeholder="mobile number" name="ph">
                                       </div>
 
                                       <button type="submit" class="spess-cta"><b class="">Get a Quote</b> <i class="fa fa-paper-plane"></i></button>
