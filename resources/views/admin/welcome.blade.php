@@ -10,7 +10,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
 
-
+        <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
 		<script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script> 
 		
@@ -21,7 +21,7 @@
     <body>
         
        
-
+        <div class="magic"></div>
 
     </body>
 </html>

@@ -268,3 +268,52 @@
 	font-weight: 600;
 	padding-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+/********************************************************ADMIN STYLING************************/
+.admin-panel{
+	background-color: #333;
+	padding:5px 5px;
+	font-family: 'Signika', sans-serif;
+	font-weight: 600;
+	margin-left: -15px;
+}
+.admin-panel h3{
+	color:#fff;
+}
+.admin-menu{
+	background-color: #ebebeb;
+	margin-left: -15px;
+	list-style: none;
+	height:768px;
+}
+.admin-menu li{
+	margin-left: -10px;
+	padding-top: 5px;
+}
+.admin-menu li a{
+	font-family: 'Signika', sans-serif;
+	font-size: 11pt;
+	font-weight: 300;
+}
+
+.admin-messages{
+	background-color: #ebebeb;
+	padding: 20px 15px;
+	margin-top: 20px;
+}
+
+.admin-messages h3{
+	font-family: 'Signika', sans-serif;
+	font-weight: 600;
+}
+.admin-messages p{
+	font-family: 'Signika', sans-serif;
+}
