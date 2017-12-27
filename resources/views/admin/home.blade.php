@@ -1,6 +1,6 @@
-
-
-	
+<div>
+ <div  class="magic" >
+ </div>	
         <div class="container-fluid">
             <div class="row">
             	<div class="col-md-2 col-sm-3 col-xs-3">
@@ -11,7 +11,7 @@
 
                         <ul class="admin-menu">
                             <li><a href="/view/message" class="load_ajax" cl="admin_content">Messages</a></li>
-                            <li><a href="machinery" class="load_ajax" cl="content-load">Orders</a></li>
+                            <li><a href="/view/order" class="load_ajax" cl="admin_content">Orders</a></li>
                         </ul>
                     </div>
                 

@@ -50,6 +50,30 @@ $(document).ready( function(){
 		});
 		
 	}   );
+	//save order
+	$("body").on("submit",".op",function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		//alert("data");
+		var da= new FormData(this);
+		$.ajax({
+			async:true,
+			type:"POST",
+			data: da,
+			url:"/new/order",
+			processData:false,
+			contentType:false,
+			
+			success:function(data){
+				$(".op")[0].reset();
+				alert(data);
+				//alert("sucess");
+				
+			}
+			
+		});
+		
+	}   );
 	
 
 }  );
