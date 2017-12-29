@@ -1,6 +1,6 @@
 /***********************HOUSE KEEPING***********************************************/
 .blue{
-	color:#58D3F7;
+	color:#00acef;
 }
 .red{
 	color:#FF4000;
@@ -14,7 +14,7 @@
 	font-weight: 600;
 }
 .spess-header{
-	border-top:7px solid #00d8ff;
+	border-top:10px solid #00acef;
 	border-bottom:1px solid #ebebeb;
 	-webkit-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
 	-moz-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
@@ -37,7 +37,7 @@
 
 }
 .menu li a{
-	color:#58D3F7;
+	color:#00acef;
 }
 .menu li a:active{
 	color:#FF4000;
@@ -67,12 +67,13 @@
 	background-color: #fff;
 	border:1px solid #ebebeb;
 	font-family: 'Signika', sans-serif;
-	color:#58D3F7;
+	font-size: 14pt;
+	color:#00acef;
 
 }
 .services{
-	padding-top: 50px;
-	padding-bottom: 30px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 .services h1{
 	text-align: center;
@@ -105,7 +106,10 @@
 .about-us{
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: #ebebeb;
+	/*background-color: #ebebeb;*/
+	background-image: url("/images/dottedbg.png");
+	background-repeat: repeat;
+	background-attachment: fixed;
 }
 .about-us h1{
 	font-family: 'Signika', sans-serif;
@@ -134,21 +138,37 @@
 }
 .vision{
 	background-color: #fff;
-	padding: 20px 15px;
-	margin-bottom: 10px;
+	padding: 5px 20px;
+	margin-bottom: 30px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 .mision{
 	background-color: #fff;
-	padding: 20px 15px;
-	margin-bottom: 10px;
+	padding: 5px 20px;
+	margin-bottom: 30px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 .values{
 	background-color: #fff;
-	padding: 20px 15px;
+	padding: 5px 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.service-iconsbg{
+	background-color: #00acef;
+	margin-right: -30px;
+	padding:15px 15px;
+	border-bottom-left-radius: 20px;
+}
+.service-icons{
+	width:100%;
+	height: auto;
 }
 .client-testimony{
-	padding-top: 50px;
-	padding-bottom:50px;
+	padding-top: 100px;
+	padding-bottom:100px;
 }
 .client-testimony h1{
 	text-align: center;
@@ -172,9 +192,15 @@
 	padding-top: 15px;
 }
 .footer{
-	background-color: #ebebeb;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	background-color: #666666;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.footermap-header{
+	background-color: #fff;
+	padding:5px 10px 2px 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 .footer h1{
 	font-family: 'Signika', sans-serif;
@@ -184,6 +210,9 @@
 	font-family: 'Signika', sans-serif;
 	font-weight:600;
 	font-size: 18pt;
+	padding-left: 20px;
+	margin-bottom: 0;
+	padding-bottom: 5px;
 }
 .footer p{
 	font-family: 'Signika', sans-serif;
@@ -193,11 +222,32 @@
 #map{
 	width: 100%;
 	height: 300px;
+	padding-top: 20px;
 }
 .contacts-wrapper{
 	padding-top:15px;
+	padding-left: 10px;
 }
-
+.address-details{
+	background-color: #ebebeb;
+	padding-top:10px;
+	padding-bottom: 20px;
+	border-top:10px solid #00acef;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.business-address{
+	padding-left: 50px;
+	margin-top: 0;
+}
+.copy-right{
+	background-color: #666666;
+	border-top:1px solid #fff;
+}
+.copyright-text{
+	text-align:center;
+	color:#fff;
+}
 /***********************************PAGES STYLING********************************/
 .pages-header{
 	background-image: url("/images/header-logistics.jpg");
@@ -230,6 +280,10 @@
 	border-top-right-radius: 5px;
 	border-bottom:4px solid #58D3F7;
 	padding:10px 10px 5px 10px;
+}
+.form-title{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .form-body{
 	background-color: #f2f2f2;

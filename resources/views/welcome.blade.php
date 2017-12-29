@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script src="/js/jquery-3.2.1.min.js"></script>
         <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -92,42 +93,46 @@
 <div class="content-load">
             <div class="row">
                 <div class="spess-heroslider">
-                    <div class="spess-heroslider1" style="background-image: url('/images/hero-image1.jpg');height:600px;">
+                    <div class="spess-heroslider1" style="background-image: url('/images/hero-image1.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                                 <div class="col-md-5">
-                                    <h2>Logistical Services</h2>
+                                    <h2>Logistics Services</h2>
+                                    <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                      <h1><span class="red">SMALL AND LARGE TRUCKS FOR HIRE</span></h1>
-                                     <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                     <button class="spess-cta" data-popup-open="popup-1">Get a Quote  <i class="fa fa-chevron-circle-right"></i></button>
                                 </div>
                         </div>
                     </div>
 
-                    <div class="spess-heroslider2" style="background-image: url('/images/hero-image2.jpg');height:600px;">
+                    <div class="spess-heroslider2" style="background-image: url('/images/hero-image2.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                             <div class="col-md-6">
                                 <h2>Plant & Machinery</h2>
+                                <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                 <h1><span class="red">GRADERS, DOZERS, BACKHOES COMPACTORS FOR HIRE</span></h1>
-                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote<i class="fa fa-chevron-circle-right"></i></button>
+                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="spess-heroslider3" style="background-image: url('/images/hero-image3.jpg');height:600px;">
+                    <div class="spess-heroslider3" style="background-image: url('/images/hero-image3.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                             <div class="col-md-6">
                                 <h2>Heavy Cargo Transportation</h2>
+                                <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                 <h1><span class="red">BARGING, WAREHOUSING<br>RAIL, AND ROAD SERVICES</span></h1>
-                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote<i class="fa fa-chevron-circle-right"></i></button>
+                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="spess-heroslider4" style="background-image: url('/images/hero-image4.jpg');height:600px;">
+                    <div class="spess-heroslider4" style="background-image: url('/images/hero-image4.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                             <div class="col-md-6">
                                 <h2>Personal Protective Equipment</h2>
+                                <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                 <h1><span class="red">SUPPLIES TO GEOTHERMAL, CONSTRUCTION, OIL AND GAS INDUSTRY</span></h1>
-                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote<i class="fa fa-chevron-circle-right"></i></button>
+                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -138,13 +143,13 @@
                 <div class="container">
                     <div class="services">
                         <div class="row">
-                            <h1><span class="blue"> Our</span><span class="red"> Services</span></h1>
+                            <h1><span class="blue"> Our Services</span></h1>
 
                             <div class="col-md-4">
                                 <div class="service-wrapper">
                                      <img class="service-icons"  src = "{{ URL::asset('/images/service-icon1.png')}}" alt = "service-icon">
-                                    <h4>LOGISTICAL SERVICES</h4>
-                                    <p>SPESS Ltd specializes its supplies in geothermal, construction, oil and gas industry to try and close the gap that exists in this industry. We ensure that we stick to our high quality values in every supplies we do.</p>
+                                    <h4>LOGISTICS SERVICES</h4>
+                                    <p>At SPESS Ltd, we know that every businesses' logistics and rental needs are different. From the smallest economical car to the largest commercial truck, we customize our transport solutions to fit your needs</p>
                                 </div>
                             </div>
 
@@ -152,7 +157,7 @@
                                 <div class="service-wrapper">
                                     <img class="service-icons"  src = "{{ URL::asset('/images/service-icon2.png')}}" alt = "service-icon">
                                     <h4>PLANT AND MACHINERY</h4>
-                                    <p>At SPESS Ltd, we know that every one's rental needs are different. From the smallest economical car to the largest commercial truck, or a great one way migration to getting to a business meeting on time</p>
+                                    <p>SPESS Ltd specializes its supplies in geothermal, construction, oil and gas industry to try and close the gap that exists in this industry. We ensure that we stick to our high quality values in every supplies we do.</p>
                                 </div>
                             </div>
 
@@ -160,7 +165,7 @@
                                 <div class="service-wrapper">
                                     <img class="service-icons"  src = "{{ URL::asset('/images/service-icon3.png')}}" alt = "service-icon">
                                     <h4>SUPPLY OF PPE</h4>
-                                    <p>SPESS Ltd specializes its supplies in geothermal, construction, oil and gas industry to try and close the gap that exists in this industry. We ensure that we stick to our high quality values in every supplies we do.</p>
+                                    <p>We supply  quality Personal Protective Equipment (PPE) and Personal Protective Clothing (PPC) to all industries. SPESS Ltd has vast knowledge in drilling projects PPE/PPC requirements and all SPESS Ltd supplies conform to OSHA/ANSI/CE standards.</p>
                                 </div>
                             </div>
                         </div>
@@ -172,36 +177,73 @@
                 <div class="about-us">
                         <div class="container">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <div class="aboutus-wrapper">
-                                            <h1><span class="red"> About</span><span class="blue"> Us</span></h1>
+                                            <h1><span class="red"> About Us</span></h1>
+                                            <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                             <h5 class="about-us-text"><span class="bold">SPESS Rental Services Ltd</span> is a privately held Limited liability company that was established  in January 2014 with a goal to provide excellent result by providing top quality supplies and reliable integrated services that meets our client`s needs. We dedicate ourselves to be a customer focused company that provides the best in products and services to our customers in Eastern Africa and global at large.</h5>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                        <div class="vision">
-                                            <h4><span class="red">VISION</span></h4>
-                                            <p>To be the world leader in provision of equipment and related services, by doing this we will earn our client`s enthusiasm through continuous improvement driven by the integrity, teamwork and innovation of spess people to be a company that our shareholders and society want.</p>
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="service-iconsbg">
+                                                        <img class="service-icons"  src = "{{ URL::asset('/images/vision.png')}}" alt = "service-icon">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10 col-xs-10">
+                                                    <div class="vision">
+                                                        <h4><span class="red">VISION</span></h4>
+                                                        <p>To be the world leader in provision of equipment and related services, by doing this we will earn our client`s enthusiasm through continuous improvement driven by the integrity, teamwork and innovation of spess people to be a company that our shareholders and society want.</p>
+                                                    </div>
+                                                </div>
                                         </div>
 
-                                        <div class="mision">
-                                            <h4><span class="red">MISSION</span></h4>
-                                            <p>We strive to set, by example the standards for excellence and ethics in our industry, by pledging ourselves to seek continuous improvement through team effort, to do “whatever it takes” to deliver exceptional performance for our customers</p>
+                                        <div class="row">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="service-iconsbg">
+                                                        <img class="service-icons"  src = "{{ URL::asset('/images/mission.png')}}" alt = "service-icon">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-10 col-xs-10">
+                                                    <div class="mision">
+                                                        <h4><span class="red">MISSION</span></h4>
+                                                        <p>We strive to set, by example the standards for excellence and ethics in our industry, by pledging ourselves to seek continuous improvement through team effort, to do “whatever it takes” to deliver exceptional performance for our customers</p>
+                                                    </div>
+                                                </div>
                                         </div>
 
-                                        <div class="values">
-                                            <h4><span class="red">VALUES</span></h4>
-                                            <p>SPESS operation is guided by the following values;
-                                            <li class="spess-text"><b>Quality</b> - We strive at providing quality supplies and services that will earn our client`s enthusiasm.
-                                            </li>
+                                        <div class="row">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="service-iconsbg">
+                                                        <img class="service-icons"  src = "{{ URL::asset('/images/values.png')}}" alt = "service-icon">
+                                                    </div>
+                                                </div>
 
-                                            <li class="spess-text"><b>Professional</b> - SPESS Ltd is committed to provide professional, courteous, and knowledgeable services to it esteemed clients.
-                                            </li>
+                                                <div class="col-md-10 col-xs-10">
+                                                    <div class="values">
+                                                        <h4><span class="red">VALUES</span></h4>
+                                                        <p>SPESS operation is guided by the following values;
+                                                           <ul>
+                                                            <li class="spess-text"><b>Quality</b> - We strive at providing quality supplies and services that will earn our client`s enthusiasm.
+                                                            </li>
 
-                                            <li class="spess-text"><b>Reliability</b> - We are committed to provide consistently prompt supplies and services to exceed our customers’ expectations.
-                                            </li></p>
+                                                            <li class="spess-text"><b>Professional</b> - SPESS Ltd is committed to provide professional, courteous, and knowledgeable services to it esteemed clients.
+                                                            </li>
+
+                                                            <li class="spess-text"><b>Reliability</b> - We are committed to provide consistently prompt supplies and services to exceed our customers’ expectations.
+                                                            </li>
+                                                           </ul>
+                                                        </p>
+                                                    </div>
+                                                </div>
                                         </div>
+
+
+
                                     </div>
                                 </div>
                         </div>
@@ -211,7 +253,7 @@
             <div class="row">
                 <div class="client-testimony">
                     <div class="container">
-                        <h1>What Our Clients Say About us:</h1>
+                        <h1><span class="blue">What Our Clients Say About us:</span></h1>
 
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
@@ -230,16 +272,24 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8">
-                                <h1><span class="blue">Visit Us</span></h1>
-                                <div id="map"></div>
-                                    <div class="col-md-6">
-                                        <h4>Watermark businesspark,</h4>
-                                        <p>Bay court, Ndege road,<br>Off Langata road.<br>P.O Box 10298-00400 Nairobi, Kenya.</p>
-                                    </div>
 
-                                    <div class="col-md-6">
-                                        <div class="contacts-wrapper">
-                                            <p>+254 742 360 766<br>+254 710 211 181<br>+254 724 723 980<br><b>Email:</b> info@spessltd.com</p>
+                                <div class="footermap-header">
+                                    <h1><span class="blue">Visit Us</span></h1>
+                                </div>
+
+                                <div id="map"></div>
+                                    <div class="address-details">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><i class="fa fa-home"></i> Watermark businesspark,</h4>
+                                                <p class="business-address">Bay court, Ndege road,<br>Off Langata road.<br>P.O Box 10298-00400 Nairobi, Kenya.</p>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="contacts-wrapper">
+                                                    <p><i class="fa fa-phone-square"></i><b> Cell:</b> +254 742 360 766<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 211 181<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 724 723 980<br><b><i class="fa fa-envelope"></i> Email:</b> info@spessltd.com</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                             </div>
@@ -250,7 +300,8 @@
                                         <h4 class="form-title">Still Have a Question?</h4>
                                     </div>
 
-                                    <div class="footer-form-body">
+                                    <div class="form-body">
+                                        <p>If you have any question regarding any of our services, do not hesitate to ask, we will get back to you shortly.
                                          <form class="msg_form">
                                          {{csrf_field()}}
                                           <div class="form-group">
@@ -269,12 +320,20 @@
                                             <textarea class="form-control form-text" rows="4" placeholder="Your Message" name="msg"></textarea>
                                           </div>
 
-                                          <button type="submit" class="subscribe-button form-text">Submit <i class="fa fa-paper-plane"></i></button>
+                                          <button type="submit" class="spess-cta">Ask Question <i class="fa fa-paper-plane"></i></button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="copy-right">
+                    <div class="container">
+                        <p class="copyright-text">&copy Spearspeak Supplies & Servies</p>
                     </div>
                 </div>
             </div>
