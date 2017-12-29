@@ -12,6 +12,7 @@
                         <ul class="admin-menu">
                             <li><a href="/view/message" class="load_ajax" cl="admin_content">Messages</a></li>
                             <li><a href="/view/order" class="load_ajax" cl="admin_content">Orders</a></li>
+							<li><a href="/view/post" class="load_ajax" cl="admin_content">Blog</a></li>
                         </ul>
                     </div>
                 

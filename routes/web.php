@@ -37,10 +37,10 @@ Route::get('/view/order', 'order@view_order');
 //delete order
 Route::get('/del/order/{id}', 'order@del_order');
 //create post
-/*Route::get('/new/post', '');
+Route::get('/new/post', 'blog@create_post');
 //view post
-Route::get('/new/post', '');
-//edit post form
+Route::get('/view/post', 'blog@view_post');
+/*//edit post form
 Route::get('/up/form', '');
 //save edit post form
 Route::post('/save/up', '');

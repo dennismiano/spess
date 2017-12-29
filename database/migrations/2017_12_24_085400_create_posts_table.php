@@ -17,9 +17,11 @@ class CreatePostsTable extends Migration
             $table->increments('id');
 			$table->text('title');
 			$table->text('name');
+			$table->text('category');
 			$table->text('body');
             $table->timestamps();
         });
+		DB::statement("ALTER TABLE posts ADD files MEDIUMBLOB");
     }
 
     /**

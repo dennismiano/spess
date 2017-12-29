@@ -333,7 +333,9 @@
             <div class="row">
                 <div class="copy-right">
                     <div class="container">
-                        <p class="copyright-text">&copy Spearspeak Supplies & Servies</p>
+					 
+                        <p class="copyright-text">&copy {{ date('Y')}} Spearspeak Supplies & Servies</p>
+						        
                     </div>
                 </div>
             </div>
