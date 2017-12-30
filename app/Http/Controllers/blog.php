@@ -16,8 +16,17 @@ class blog extends Controller
 			   "title"=>$request->title,
 			   "name"=>$request->name,
 			   "body"=>$request->body,
-			   "category"=>$request->category,
+			   "category"=>$request->category
+			   //"files"=>file_get_contents($request->file("files"));
 			 ];
+			$file_types=$request->file("ff")->getMimeType() == "image/jpeg" || $request->file("ff")->getMimeType() == "image/png" || $request->file("ff")->getMimeType() == "image/gif";
+			 if( $request->hasFile("ff") && $request->file("ff")->isValid() && $file_types ){
+				$det["files"]= file_get_contents($request->file("ff") );
+				//return pg_escape_bytea($det["files"]  );
+				  //return var_dump ( $det['files'] );
+				
+				 
+			 }
 			 $np=$post::create($det);
 			 if($np){
 				 return "Post created successfully.";
@@ -47,18 +56,33 @@ class blog extends Controller
 	public function up_form(int $id , post $posts ){
 		$fp=$posts::find($id);
 		if($fp){
-			return view("post.update_form",["post"=>$fp]);
+			return view("post.view",["up_post"=>$fp]);
 		}
 		else{
-			return abort(404);
+			return "Error could not find post. ";
 		}
 		
 		
 	}
 	//save updated post
-	public function save_up(int $id ,post $posts,request $request){
+	public function save_up(post $posts,request $request){
 		if( $request->isMethod("POST")    ){
-			$det=[];
+			$det=[
+			 "title"=>$request->title,
+			 "name"=>$request->title,
+			 "body"=>$request->title,
+			 "category"=>$request->title,
+			
+			 ];
+			 //check file
+			 $file_types=$request->file("ff")->getMimeType() == "image/jpeg" || $request->file("ff")->getMimeType() == "image/png" || $request->file("ff")->getMimeType() == "image/gif";
+			 if( $request->hasFile("ff") && $request->file("ff")->isValid() && $file_types ){
+				$det["files"]= file_get_contents($request->file("ff") );
+				//return pg_escape_bytea($det["files"]  );
+				  //return var_dump ( $det['files'] );
+				
+				 
+			 }
 			$up=$posts::update($det);
 			if($up){
 				return "Post updated.";
@@ -68,6 +92,7 @@ class blog extends Controller
 			}
 		}
 		else{
+			return abort(404);
 			
 		}
 		
@@ -103,9 +128,9 @@ class blog extends Controller
 		}
 	}
 	//view comment
-	public function view_cmt( Request $request,comment $cmt){
-		$vc=$cmt::orderBy("created_at","desc")->SimplePaginate(5);
-	  return  view("blog.cmt.view",["cmt"=>$vc]);
+	public function view_cmt( int $id,Request $request,comment $cmt){
+		$vc=$cmt::orderBy("created_at","desc")->where('post_id',$id)->SimplePaginate(5);
+	  return  view("cmt.admin_view",["cmt"=>$vc]);
 		
 	}
 	//del comment

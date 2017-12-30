@@ -81,6 +81,31 @@ $(document).ready( function(){
 			   });
 		 
 	} );
+	//create post
+	$("body").on("submit",".ad_post",  function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var da=new FormData(this);
+		  	$.ajax({
+				async:true,
+				type:"POST",
+				url:"/new/post",
+				data:da,
+				processData:false,
+				contentType:false,
+				error:function(data){
+					 alert(data);
+				 },
+				success:function(data){
+					//cla.empty().html(data);
+					alert(data);
+					
+				}
+				
+				
+			   });
+		 
+	} );
 	
 
 	
