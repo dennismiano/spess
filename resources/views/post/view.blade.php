@@ -1,7 +1,8 @@
-<div>
-<div>
-<div>	
+
+
+	
 @if(isset($up_post)  )
+	<div>
 		update blog
 		<form class="up_post">
 	   {{csrf_field()}}
@@ -20,53 +21,58 @@
 	   
 	   
 	   </form>
-	   @else
-		    @if( isset($post)  && $post->isNotEmpty()   )	
-	
-		post blog
-	   <form class="ad_post" >
-	   {{csrf_field()}}
-		  <input type="text" name="title"  placeholder="title" name="title">
-		  <input  type="text"  placeholder="name" name="name" />
-		  <input type="text"  placeholder="body" name="body" />
-		  <input type="text"  placeholder="category" name="category" />
-		  <input type="file"  name="ff" />
-		  <button type="submit" >Post</button>
-	   
-	   
-	   
-	   </form>
 	</div>
-		<div>
-		  
-			   @foreach( $post as $value)
-					<div>
-					{{$value->created_at->diffForHumans()}}<br>
-					{{$value->title}}<br>
-					{{$value->name}}<br>
-					{{$value->category}}<br>
-					{{$value->body}}<br>
-					image:<img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" /><br>
-					<button type="button"  class="del_post" id="{{$value->id}}">Delete</button> &nbsp;
-					<button type="button" class="view_cmt">Comments</button> &nbsp;
-					<button type="button" class="edit_post" id="{{$value->id}}">Edit</button><br>
-					
-					
-					</div>
-			   @endforeach
-    @else
-			   <p>No posts to display.</p>
-		   
+@else
+			 post blog
+				   <form class="ad_post" >
+			   {{csrf_field()}}
+				  <input type="text" name="title"  placeholder="title" name="title">
+				  <input  type="text"  placeholder="name" name="name" />
+				  <input type="text"  placeholder="body" name="body" />
+				  <input type="text"  placeholder="category" name="category" />
+				  <input type="file"  name="ff" />
+				  <button type="submit" >Post</button>
+			   
+			   
+			   
+			   </form>
+		@if( isset($post)  && $post->isNotEmpty()   )	
+			
+				
+			   
+			
+				<div>
+				  
+					   @foreach( $post as $value)
+							<div>
+							{{$value->created_at->diffForHumans()}}<br>
+							{{$value->title}}<br>
+							{{$value->name}}<br>
+							{{$value->category}}<br>
+							{{$value->body}}<br>
+							image:<img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" /><br>
+							<button type="button"  class="del_post" id="{{$value->id}}">Delete</button> &nbsp;
+							<button type="button" class="view_cmt">Comments</button> &nbsp;
+							<button type="button" class="edit_post" id="{{$value->id}}">Edit</button><br>
+							
+							
+							</div>
+					   @endforeach
+			  </div>
+			@else
+				@if( ! isset($up_post)  )
+					   <p>No posts to display.</p>
+				@endif
+				   
 
 
 
 
-		</div>
-	</div>
-	@endif
-		   
-   
- @endif
- </div>
+				
+			
+		@endif
+@endif
+
+ 
 		
   
