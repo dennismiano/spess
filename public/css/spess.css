@@ -358,14 +358,16 @@
 	border:none;
 	margin-top: 10px;
 }
-.admin-menu{
+.admin-menu-section{
 	background-color: #ebebeb;
-	margin-left: -15px;
+	width:20%;
+	height:100%;
+	float:left;
+}
+.admin-menu{
 	list-style: none;
-	height:768px;
 }
 .admin-menu li{
-	margin-left: -10px;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	border-bottom:1px solid #ccc;

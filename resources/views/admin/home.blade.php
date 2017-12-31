@@ -19,8 +19,7 @@
 -->
 
             <div class="row">
-                <div class="adminpage-content">
-                	<div class="col-md-2 col-sm-3 col-xs-3">
+                	<div class="admin-menu-section">
                             <ul class="admin-menu">
                                 <li><a href="/view/message" class="load_ajax" cl="admin_content"><i class="fa  fa-comments adminmenu-icon"></i><span class="hide-element">&nbsp Messages</span></a></li>
                                 <li><a href="/view/order" class="load_ajax" cl="admin_content"><i class="fa  fa-shopping-cart adminmenu-icon"></i><span class="hide-element">&nbsp Orders</span></a></li>
@@ -29,10 +28,9 @@
                     </div>
                 
 
-                    <div class="col-md-10 col-sm-9 col-xs-9">
+                    <div class="admin_content-section">
     	                 <div class="admin_content"></div>
     				</div>
-                </div>
             </div>
             
 				 
