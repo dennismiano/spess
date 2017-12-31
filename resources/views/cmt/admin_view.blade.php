@@ -5,7 +5,7 @@
 		<input type="email" name="email" placeholder="email" />
 		<input type="text" name="name" placeholder="name"/>
 		<input type="text" name="message" placeholder="type comment"/>
-		<button>post</button>
+		<button type="submit">post</button>
 	 </form>
 	<div>
 		   @if( isset($cmt)  && $cmt->isNotEmpty()   )
@@ -15,7 +15,8 @@
 					{{$value->name}}<br>
 					{{$value->email}}<br>
 					{{$value->message}}<br>
-					<button type="button"  class="del_post">Delete</button><br>
+					<button type="button"  class="del_post">Delete</button>&nbsp;
+					<button type="button"  class="del_post">Reply</button><br>
 					
 					
 					

@@ -1,7 +1,8 @@
 <div>
 <div>
-	
-	@if(isset($up_post) && $up_post->isNotEmpty()  )
+<div>	
+@if(isset($up_post)  )
+		update blog
 		<form class="up_post">
 	   {{csrf_field()}}
 		  <input type="text" name="title"  value="{{ $up_post->title  }}">
@@ -9,17 +10,19 @@
 		  <input  type="text"  name="name" value="{{ $up_post->name  }}" />
 		  <input type="text"   name="category"  value="{{ $up_post->category  }}" />
 		  <input type="text"  name="body"  value="{{ $up_post->body  }}"  />
+		  <input type="text"  name="cat"  value="{{ $up_post->category  }}"  />
 		  <img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $up_post->files); ?>" /><br>
 		  
 		  Replace with:<input type="file"  name="ff" /><br>
 		  <button type="submit" >Update</button>
+		  <button type="button" href="/view/post" class="load_ajax" cl="admin_content">Cancel</button>
 	   
 	   
 	   
 	   </form>
-		
-		
-	@else
+	   @else
+		    @if( isset($post)  && $post->isNotEmpty()   )	
+	
 		post blog
 	   <form class="ad_post" >
 	   {{csrf_field()}}
@@ -33,37 +36,37 @@
 	   
 	   
 	   </form>
-		
-	@endif
-	
-
-
-
-
-</div>
-	<div>
-	   @if( isset($post)  && $post->isNotEmpty()   )
-		   @foreach( $post as $value)
-				<div>
-				{{$value->created_at->diffForHumans()}}<br>
-				{{$value->title}}<br>
-				{{$value->name}}<br>
-				{{$value->category}}<br>
-				{{$value->body}}<br>
-				image:<img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" /><br>
-				<button type="button"  class="del_post">Delete</button> &nbsp;
-				<button type="button" class="view_cmt">Comments</button> &nbsp;
-				<button type="button" class="view_cmt">Edit</button><br>
-				
-				
-				</div>
-		   @endforeach
-	   @else
-		   <p>No posts to display.</p>
-	   @endif
-
-
-
-
 	</div>
-</div>
+		<div>
+		  
+			   @foreach( $post as $value)
+					<div>
+					{{$value->created_at->diffForHumans()}}<br>
+					{{$value->title}}<br>
+					{{$value->name}}<br>
+					{{$value->category}}<br>
+					{{$value->body}}<br>
+					image:<img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" /><br>
+					<button type="button"  class="del_post" id="{{$value->id}}">Delete</button> &nbsp;
+					<button type="button" class="view_cmt">Comments</button> &nbsp;
+					<button type="button" class="edit_post" id="{{$value->id}}">Edit</button><br>
+					
+					
+					</div>
+			   @endforeach
+    @else
+			   <p>No posts to display.</p>
+		   
+
+
+
+
+		</div>
+	</div>
+	@endif
+		   
+   
+ @endif
+ </div>
+		
+  
