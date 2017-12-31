@@ -12,7 +12,9 @@
 				    @endforeach
 
 				    @else
-						<p>No Messages</p>
+						<div class="empy-message">
+							<p>No Messages</p>
+						</div>
 					@endif
 			</div>
 		</div>
