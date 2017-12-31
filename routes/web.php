@@ -40,18 +40,20 @@ Route::get('/del/order/{id}', 'order@del_order');
 Route::post('/new/post', 'blog@create_post');
 //view post
 Route::get('/view/post', 'blog@view_post');
+//del post
+Route::get('/del/post/{id}', 'blog@del_post');
+
  //edit post form
-Route::get('/update/form', 'blog@up_form');
+Route::get('/update/form/{id}', 'blog@up_form');
 //save edit post form
-Route::post('/save/up', 'blog@up_form');
-/*  //create comment
-Route::post('/new/comment', '');
-//create comment form
-Route::post('/form/cmt', '');
+Route::post('/save/up', 'blog@save_up');
+ //create comment
+Route::post('/new/comment', 'blog@create_cmt');
 //view comment
-Route::get('/cmt/view', '');
+Route::get('/cmt/view/{id}', 'blog@view_cmt');
 //delete comment
-Route::post('/del/cmt', '');
+Route::post('/del/cmt', 'blog@del_cmt');
+/* 
 //reply form
 Route::get('/reply/form', '');
 //save reply

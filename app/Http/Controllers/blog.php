@@ -48,7 +48,7 @@ class blog extends Controller
 			return "Post deleted successfully.";
 		}
 		else{
-			return abort(404);
+			return "Error.Couldn't delete post.";
 		}
 		
 	}
@@ -69,27 +69,38 @@ class blog extends Controller
 		if( $request->isMethod("POST")    ){
 			$det=[
 			 "title"=>$request->title,
-			 "name"=>$request->title,
-			 "body"=>$request->title,
-			 "category"=>$request->title,
+			 "name"=>$request->name,
+			 "body"=>$request->body,
+			 "category"=>$request->cat,
 			
 			 ];
-			 //check file
-			 $file_types=$request->file("ff")->getMimeType() == "image/jpeg" || $request->file("ff")->getMimeType() == "image/png" || $request->file("ff")->getMimeType() == "image/gif";
-			 if( $request->hasFile("ff") && $request->file("ff")->isValid() && $file_types ){
-				$det["files"]= file_get_contents($request->file("ff") );
-				//return pg_escape_bytea($det["files"]  );
-				  //return var_dump ( $det['files'] );
-				
+		   if($request->id){
+				  //find post
+				 $fp=$posts::find($request->id);
+				 //check file
 				 
-			 }
-			$up=$posts::update($det);
-			if($up){
-				return "Post updated.";
-			}
-			else{
-				return "Error.Failed to update.";
-			}
+				 if( $request->hasFile("ff") && $request->file("ff")->isValid() ){
+					 $file_types=$request->file("ff")->getMimeType() == "image/jpeg" || $request->file("ff")->getMimeType() == "image/png" || $request->file("ff")->getMimeType() == "image/gif";
+					if($file_types){
+						$det["files"]= file_get_contents($request->file("ff") );
+					//return pg_escape_bytea($det["files"]  );
+					  //return var_dump ( $det['files'] );
+						
+					}
+				 
+				 }
+				$up=$fp->update($det);
+				if($up){
+					return "Post updated.";
+				}
+				else{
+					return "Error.Failed to update.";
+				}
+			   
+		   }
+		 else{
+			   return "Error.Couldn't find post.";
+		   }
 		}
 		else{
 			return abort(404);
@@ -124,7 +135,7 @@ class blog extends Controller
 			
 		}
 		else{
-			
+			return abort(404);
 		}
 	}
 	//view comment
