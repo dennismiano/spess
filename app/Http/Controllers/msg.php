@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\message;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\confirm;
 
 class msg extends Controller
 {
@@ -17,12 +19,23 @@ class msg extends Controller
 			 "message"=>$request->msg
 			 
 			 ];
+			$em=$request->email;
 			$msgs=$message::create($det);
 			if($msgs){
-				return "message sent";
+				//return "message sent";
+				$ms_name=$request->name;
+				$mdf="Thank you for messaging us.Our support team has raised a ticket for your message and will get back to you shortly.";
+				$send_conf=Mail::to($em)->send(new confirm($mdf,$ms_name)  );
+				if( !$send_conf){
+					return "Message sent successfully.A confirmation email has been sent to ".$em.".";
+				}
+				else{
+					return "Ooops failed to send confirmation email but don't worry  we have received your email anyway.";
+				}
+				
 			}
 			else{
-				return "An error occured in sending your message";
+				return "Ooops an error occured in sending your message.";
 			}
 			
 			
