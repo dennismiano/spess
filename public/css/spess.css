@@ -332,42 +332,65 @@
 
 
 /********************************************************ADMIN STYLING************************/
-.admin-panel{
-	background-color: #333;
-	padding:5px 5px;
-	font-family: 'Signika', sans-serif;
-	font-weight: 600;
-	margin-left: -15px;
+.admin-header{
+	border-top:10px solid #00acef;
+	border-bottom:1px solid #ebebeb;
+	-webkit-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
+	-moz-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
+	box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 999;
+	padding:0 30px;
 }
-.admin-panel h3{
+.header-branding{
+	float:left;
+}
+.admin-header h2{
+	font-family: 'Signika', sans-serif;
+}
+.logout-btn{
+	padding:7px 20px;
+	border-radius: 20px;
+	background-color: #00acef;
 	color:#fff;
+	font-family: 'Signika', sans-serif;
+	border:none;
+	margin-top: 10px;
 }
-.admin-menu{
+.admin-panel-content{
 	background-color: #ebebeb;
-	margin-left: -15px;
+	height: 100%;
+}
+.admin-panel-menu{
 	list-style: none;
-	height:768px;
+	width:13%;
+	float: left;
+	height: 100%;
+	background-color: #fff;
 }
-.admin-menu li{
-	margin-left: -10px;
-	padding-top: 5px;
+.admin-panel-menu li{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-bottom:1px solid #ebebeb;
+	padding-left: 10px;
+	background-color: #ccc;
 }
-.admin-menu li a{
-	font-family: 'Signika', sans-serif;
-	font-size: 11pt;
-	font-weight: 300;
-}
-
-.admin-messages{
-	background-color: #ebebeb;
-	padding: 20px 15px;
-	margin-top: 20px;
+.admin_content{
+	padding: 20px 20px !important;
 }
 
-.admin-messages h3{
-	font-family: 'Signika', sans-serif;
-	font-weight: 600;
+@media only screen and (min-width : 768px) {
+	.hide-element{
+		display: block;
+	}
+	.adminmenu-icon{
+		float: left;
+	}
 }
-.admin-messages p{
-	font-family: 'Signika', sans-serif;
+
+
+/************************************************STYLING MESSAGES PAGES********************************/
+.empty-message{
+	background-color: #fff;
 }

@@ -1,5 +1,3 @@
-<div class="row">
-		<div class="col-md-10">
 			<div class="admin-messages">
 				@if( isset($msg) && $msg->isNotEmpty($msg))
 					@foreach( $msg as $value )
@@ -12,8 +10,9 @@
 				    @endforeach
 
 				    @else
-						<p>No Messages</p>
+							
+						<div class="row">
+									<p class="empty-message">No Messages</p>
+						</div>
 					@endif
 			</div>
-		</div>
-</div>
