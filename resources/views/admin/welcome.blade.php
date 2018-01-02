@@ -14,9 +14,7 @@
         <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
 		<script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script> 
-		
-        
-        <script src="{{ URL::asset('/js/admin/admin.js')}}"></script>    
+		<script src="{{ URL::asset('/js/admin/admin.js')}}"></script>    
     </head>
 
     <body>

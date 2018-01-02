@@ -52,8 +52,17 @@ Route::post('/new/comment', 'blog@create_cmt');
 //view comment
 Route::get('/cmt/view/{id}', 'blog@view_cmt');
 //delete comment
-Route::post('/del/cmt', 'blog@del_cmt');
-/* 
+Route::get('/del/cmt/{id}', 'blog@del_cmt');
+/*
+//view uploaded pics
+Route::get('/view/cmt/{id}', 'blog@del_cmt');
+//save uplodaded pic
+Route::get('/upload/pic', '');
+//delete uploaded pics
+Route::get('/del/pic', '');
+
+
+ 
 //reply form
 Route::get('/reply/form', '');
 //save reply

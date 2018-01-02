@@ -119,14 +119,17 @@ class blog extends Controller
 		if( $request->isMethod("POST")    ){
 			$det=[
 			 "name"=>$request->name,
-			 "email"=>$request->email,
+			 //"email"=>$request->email,
 			 "post_id"=>$request->post_id,
 			 "message"=>$request->message,
 			];
+			if($request->email){
+				$det["email"]=$request->email;
+			}
 			$cc=$cmt::create($det);
 			if($cc){
-				return "Comment created successfully";
-				
+				//return "Comment created successfully";
+				return redirect()->action("blog@view_cmt",[ "id"=>$request->post_id]);
 				
 			}
 			else{
@@ -141,15 +144,17 @@ class blog extends Controller
 	//view comment
 	public function view_cmt( int $id,Request $request,comment $cmt){
 		$vc=$cmt::orderBy("created_at","desc")->where('post_id',$id)->SimplePaginate(5);
-	  return  view("cmt.admin_view",["cmt"=>$vc]);
+	  return  view("cmt.admin_view",["cmt"=>$vc,"post_id"=>$id]);
 		
 	}
 	//del comment
 	public function del_cmt( int $cid,Request $request,comment $cmt){
+		$postid=$cmt::find($cid)->post->id;
 		$dc=$cmt::destroy($cid);
-		if($dc){
-			return "Comment deleted successfully.";
-			
+		if($dc  && $postid ){
+			//return "Comment deleted successfully.";
+			return redirect()->action("blog@view_cmt",["id"=>$postid]);
+			//return var_dump($postid);
 		}
 		else{
 			return "Error.Failed to delete comment.";

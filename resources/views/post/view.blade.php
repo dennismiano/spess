@@ -44,7 +44,7 @@
 				<div>
 				  
 					   @foreach( $post as $value)
-							<div>
+							<div class="post_div">
 							{{$value->created_at->diffForHumans()}}<br>
 							{{$value->title}}<br>
 							{{$value->name}}<br>
@@ -52,8 +52,9 @@
 							{{$value->body}}<br>
 							image:<img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" /><br>
 							<button type="button"  class="del_post" id="{{$value->id}}">Delete</button> &nbsp;
-							<button type="button" class="view_cmt">Comments</button> &nbsp;
+							<button type="button" class="view_cmt" id="{{$value->id}}">Comments({{$value->comments()->count()}})</button> &nbsp;
 							<button type="button" class="edit_post" id="{{$value->id}}">Edit</button><br>
+							
 							
 							
 							</div>
