@@ -358,43 +358,26 @@
 	border:none;
 	margin-top: 10px;
 }
-.admin-menu-section{
+.admin-panel-content{
 	background-color: #ebebeb;
-	width:20%;
-	height:100%;
-	float:left;
+	height: 100%;
 }
-.admin-menu{
+.admin-panel-menu{
 	list-style: none;
+	width:13%;
+	float: left;
+	height: 100%;
+	background-color: #fff;
 }
-.admin-menu li{
+.admin-panel-menu li{
 	padding-top: 7px;
 	padding-bottom: 7px;
-	border-bottom:1px solid #ccc;
+	border-bottom:1px solid #ebebeb;
+	padding-left: 10px;
+	background-color: #ccc;
 }
-.admin-menu li a{
-	font-family: 'Signika', sans-serif;
-	font-size: 11pt;
-	font-weight: 300;
-}
-.adminmenu-icon{
-	clear: left;
-}
-.hide-element{
-	display: none;
-}
-.admin-messages{
-	background-color: #ebebeb;
-	padding: 20px 15px;
-	margin-top: 20px;
-}
-
-.admin-messages h3{
-	font-family: 'Signika', sans-serif;
-	font-weight: 600;
-}
-.admin-messages p{
-	font-family: 'Signika', sans-serif;
+.admin_content{
+	padding: 20px 20px !important;
 }
 
 @media only screen and (min-width : 768px) {
@@ -404,4 +387,10 @@
 	.adminmenu-icon{
 		float: left;
 	}
+}
+
+
+/************************************************STYLING MESSAGES PAGES********************************/
+.empty-message{
+	background-color: #fff;
 }
