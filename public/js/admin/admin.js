@@ -17,6 +17,7 @@ $(document).ready( function(){
 			
 			
 		});
+		//alert("test");
 		
  //capture all links
 	$("body").on("click",".load_ajax",function(e){
@@ -180,7 +181,78 @@ $(document).ready( function(){
 				
 				
 			   });
+	});
+	//view cmt
+	$("body").on("click",".view_cmt",  function(e) {
+				e.preventDefault();
+				e.stopImmediatePropagation();
+				var hii= $(this);
+				
+				 var id=$(this).attr("id");
+				$.ajax({
+				async:true,
+				type:"GET",
+				url:"/cmt/view/"+id,
+				error:function(data){
+					 alert(data);
+				 },
+				success:function(data){
+					hii.parents(".post_div").append(data);
+					//alert(data);
+					
+				}
+				
+				
+			   });
 			 
+	} );
+	//create comment
+	$("body").on("submit",".create_comment",  function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var hiig=$(this);
+		var da=new FormData(this);
+		  	$.ajax({
+				async:true,
+				type:"POST",
+				url:"/new/comment",
+				data:da,
+				processData:false,
+				contentType:false,
+				error:function(data){
+					 alert(data);
+				 },
+				success:function(data){
+					hiig.parents(".cmt_div").empty().html(data);
+					
+				}
+				
+				
+			   });
+	} );
+	//del comment
+	$("body").on("click",".del_cmt",  function(e) {
+		         e.preventDefault();
+				e.stopImmediatePropagation();
+				var hii= $(this);
+				
+				 var id=$(this).attr("id");
+				$.ajax({
+				async:true,
+				type:"GET",
+				url:"/del/cmt/"+id,
+				error:function(data){
+					 alert(data);
+				 },
+				success:function(data){
+					hii.parents(".cmt_div").empty().html(data);
+					//alert(data);
+					
+				}
+				
+				
+			   });
+		
 	} );
 	
 	

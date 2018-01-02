@@ -9,7 +9,7 @@ class post extends Model
     //
 	protected $fillable=["title","name","body","category","files"];
 	public function comments(){
-		return $this->hasMany('App/comment');
+		return $this->hasMany('App\comment');
 		
 	}
 }
