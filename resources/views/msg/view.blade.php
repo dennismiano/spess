@@ -1,18 +1,42 @@
-			<div class="admin-messages">
+			
 				@if( isset($msg) && $msg->isNotEmpty($msg))
+					
+			<div class="row">
+				
 					@foreach( $msg as $value )
-					<h3>{{$value->name}}</h3>
-					<p>{{$value->phone}} | {{$value->email}}</p>
-
-					<p>{{$value->message}}</p>
-				     <p>{{$value->created_at->diffForHumans() }}</p> 
-				     <button type="button" id="{{$value->id}}" class="del_msg">Delete</button>
-				    @endforeach
+				<div class="col-md-6">
+					<div class="admin-messages">
+						<h3><span class="blue"><i class="fa fa-user-circle"></i> {{$value->name}}</span></h3>
+						<p>{{$value->message}}</p>
+						<p><i class="fa fa-phone-square"></i> {{$value->phone}} | <i class="fa fa-envelope-open"></i> {{$value->email}}</p>
+					     <p><span class="gray"><i class="fa fa-clock-o"></i> {{$value->created_at->diffForHumans() }}</span></p>
+					     <a href="#" id="{{$value->id}}" class="del_msg"><i class="fa fa-trash"></i> delete</a>&nbsp&nbsp
+					     <a href="mailto:{{$value->email}}?subject=SweetWords"><i class="fa fa-reply"></i> Reply</a>
+					</div>
+				</div>
+					@endforeach
+				
+			</div>
+				    
 
 				    @else
+				    		<div class="row">
+									<div class="message-holder">
+												<img class="no-message-icon"  src = "{{ URL::asset('/images/empty-messages.png')}}" alt = "logo">
+
+													<div class="no-message-msg">
+														<h1 class=""> Oops!</h1>
+														<p>Seems like no one has sent a message yet.</p>
+													</div>
+												<div class="how-it-works">
+														<h3>How it Works</h3>
+														<p>The messages panel receives messages from the questions form in your website. It is provided for customers to seek answers for querries that they might have about your services prior to commiting to make a purchase.</p>
+												</div>
+									</div>
+
+							</div>
+				
 							
-						<div class="row">
-									<p class="empty-message">No Messages</p>
-						</div>
+						
 					@endif
-			</div>
+			
