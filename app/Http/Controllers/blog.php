@@ -133,7 +133,7 @@ class blog extends Controller
 				
 			}
 			else{
-				return "Error failed to create comment.";
+				return "Error failed to add comment.";
 			}
 			
 		}
