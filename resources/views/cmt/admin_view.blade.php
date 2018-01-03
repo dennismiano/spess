@@ -1,7 +1,7 @@
 
-	<div class="cmt_div">
+	
 	@if(isset($post_id))
-		    
+		   <div class="cmt_div"> 
 			   <form class="create_comment" >
 				 {{csrf_field()}}
 					<input type="hidden" name="post_id" value="{{$post_id}}"  />
@@ -27,8 +27,8 @@
 				   <p>No comments to display.</p>
 		    @endif
 			
-
+       </div>
       @endif
 
-</div>
+
 	
