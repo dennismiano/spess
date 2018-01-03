@@ -6,12 +6,12 @@
 					@foreach( $msg as $value )
 				<div class="col-md-6">
 					<div class="admin-messages">
-						<h3><span class="blue"><i class="fa fa-user-circle"></i> {{$value->name}}</span></h3>
+						<h3 class="admin-messages-h3"><span class="blue"><i class="fa fa-user-circle"></i> {{$value->name}}</span></h3>
 						<p>{{$value->message}}</p>
 						<p><i class="fa fa-phone-square"></i> {{$value->phone}} | <i class="fa fa-envelope-open"></i> {{$value->email}}</p>
 					     <p><span class="gray"><i class="fa fa-clock-o"></i> {{$value->created_at->diffForHumans() }}</span></p>
 					     <a href="#" id="{{$value->id}}" class="del_msg"><i class="fa fa-trash"></i> delete</a>&nbsp&nbsp
-					     <a href="mailto:{{$value->email}}?subject=SweetWords"><i class="fa fa-reply"></i> Reply</a>
+					     <a href="mailto:{{$value->email}}?subject=Question"><i class="fa fa-reply"></i> Reply</a>
 					</div>
 				</div>
 					@endforeach

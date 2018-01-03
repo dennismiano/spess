@@ -8,6 +8,9 @@
 .gray{
 	color:#cccccc;
 }
+.header-underline{
+	border-bottom: 1px solid #000000;
+}
 .spess-text{
 	font-family: 'Signika', sans-serif;
 	font-weight:300;
@@ -433,8 +436,9 @@
 	margin-right: -13px;
 	margin-top: 10px;
 }
-.admin-messages h1{
+.admin-messages-h3{
 	font-family: 'Signika', sans-serif;
+	font-size: 10pt;
 }
 .admin-messages p{
 	font-family: 'Signika', sans-serif;
@@ -451,4 +455,22 @@
 		width:50%;
 		margin-top: 100px;
 	}
+}
+}
+/*****************************************STYLING BLOG SECTION*******************************/
+.blogform-section{
+	margin-left: -30px;
+	margin-right: -30px;
+	background-color: #ebebeb;
+}
+.blogform-section h3{
+	font-family: 'Signika', sans-serif;
+}
+.publish-btn{
+	background-color: #00acef;
+	padding: 7px 30px;
+	color: #fff;
+	font-family: 'Signika', sans-serif;
+	border:none;
+	border-radius: 20px;
 }

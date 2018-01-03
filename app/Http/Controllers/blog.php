@@ -19,8 +19,8 @@ class blog extends Controller
 			   "category"=>$request->category
 			   //"files"=>file_get_contents($request->file("files"));
 			 ];
-			$file_types=$request->file("ff")->getMimeType() == "image/jpeg" || $request->file("ff")->getMimeType() == "image/png" || $request->file("ff")->getMimeType() == "image/gif";
-			 if( $request->hasFile("ff") && $request->file("ff")->isValid() && $file_types ){
+			
+			 if( $request->hasFile("ff") && $request->file("ff")->isValid()  ){
 				$det["files"]= file_get_contents($request->file("ff") );
 				//return pg_escape_bytea($det["files"]  );
 				  //return var_dump ( $det['files'] );
