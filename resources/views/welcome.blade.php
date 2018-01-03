@@ -4,14 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+		<script src="{{ URL::asset('/js/jquery-3.2.1.min.js')}}"></script>
+        <script src="{{ URL::asset('/js/bootstrap.min.js')}}" ></script>
         <title>SPESS Rental Services</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <script src="/js/jquery-3.2.1.min.js"></script>
         <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/slick.css')}}" rel="stylesheet">
@@ -19,10 +18,32 @@
 
        
 		<script src="{{ URL::asset('/js/user/user.js')}}"></script>
-        <script src="{{ URL::asset('/js/popup.js')}}"></script>
         <script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
         <script src="{{ URL::asset('/js/slick.js')}}"></script>
-        <script src="{{ URL::asset('/js/bootstrap.bundle.js')}}"></script>    
+		{{--<script src="{{ URL::asset('/js/bootstrap.bundle.js')}}"></script> --}}   
+		<style>
+				.loader {
+				border: 5px solid #f3f3f3; /* Light grey */
+				border-top: 5px solid #3498db; /* Blue */
+				border-bottom: 5px solid #3498db; /* Blue */
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				animation: spin 2s linear infinite;
+				margin:auto;
+			}
+			.myModal,.myModal{
+				margin:auto;
+			}
+
+			@keyframes spin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+		 
+		 
+		 
+		 </style>	
     </head>
 
     <body>
@@ -37,14 +58,14 @@
                             <li><a href="logistics" class="load_ajax" cl="content-load">Logistics Services</a></li>
                             <li><a href="machinery" class="load_ajax" cl="content-load">Plant Machinery</a></li>
                             <li><a href="protective-equipment" class="load_ajax" cl="content-load">Protective Equipment</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="/user/blog" class="load_ajax" cl="content-load">Blog</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
 <!--ORDER FORM STARTS HERE-->
-            <div class="popup" data-popup="popup-1">
+{{-- <div class="popup" data-popup="popup-1">
                     <div class="popup-inner">
                         <h2 classs="hid">We'd like to hear from you</h2>
 
@@ -89,6 +110,7 @@
 
                         </div>
                 </div>
+--}}
 <!--END OF ORDER FORM-->
 <div class="content-load">
             <div class="row">
@@ -99,7 +121,7 @@
                                     <h2>Logistics Services</h2>
                                     <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                      <h1><span class="red">SMALL AND LARGE TRUCKS FOR HIRE</span></h1>
-                                     <button class="spess-cta" data-popup-open="popup-1">Get a Quote  <i class="fa fa-chevron-circle-right"></i></button>
+                                     <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote  <i class="fa fa-chevron-circle-right"></i></button>
                                 </div>
                         </div>
                     </div>
@@ -110,7 +132,7 @@
                                 <h2>Plant & Machinery</h2>
                                 <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                 <h1><span class="red">GRADERS, DOZERS, BACKHOES COMPACTORS FOR HIRE</span></h1>
-                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                 <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -121,7 +143,7 @@
                                 <h2>Heavy Cargo Transportation</h2>
                                 <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                 <h1><span class="red">BARGING, WAREHOUSING<br>RAIL, AND ROAD SERVICES</span></h1>
-                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                 <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -132,7 +154,7 @@
                                 <h2>Personal Protective Equipment</h2>
                                 <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
                                 <h1><span class="red">SUPPLIES TO GEOTHERMAL, CONSTRUCTION, OIL AND GAS INDUSTRY</span></h1>
-                                 <button class="spess-cta" data-popup-open="popup-1">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                 <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -367,6 +389,83 @@
         <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM4nUO7TbbgthUAw__ApRCsWY57cqv6Ls&callback=initMap">
         </script>
+		<!--  Loading Modal -->
+<div id="empty_model" class="modal fade" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+    </div>
+
+  </div>
+</div>
+<!-- Msg Modal -->
+<div id="Msg_modal" class="modal fade" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close " data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+	  {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--    Quote modal -->
+<div id="q_modal" class="modal fade" role="dialog" data-backdrop="static">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close " data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+	      <form class="op">
+			 {{csrf_field()}}
+			  <div class="form-group">
+			   <select type="text" class="form-control" name="serv">
+				 <option>--Which service would you like us to quote for</option>
+				 <option>Heavy equipment transportion</option>
+				 <option>General & Specialized construction equipment</option>
+				 <option>Supply of Protective Equipment</option>
+				 <option>General Logistics Support</option>
+			   </select>
+			  </div>
+			  
+			  <div class="form-group">
+				<input type="text" class="form-control"  placeholder="your name" name="name">
+			  </div>
+			  
+			  <div class="form-group">
+				<input type="email" class="form-control" placeholder="your email" name="em">
+			  </div>
+
+			  <div class="form-group "  >
+				<input type="text" class="form-control"  placeholder="mobile number" name="ph">
+			  </div>
+
+			  <button type="submit" class="spess-cta"><b class="">Get a Quote</b> <i class="fa fa-paper-plane"></i></button>
+		</form>
+        
+      </div>
+      <div class="modal-footer">
+	  {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> --}}
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
     </body>

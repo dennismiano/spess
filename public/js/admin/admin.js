@@ -2,7 +2,20 @@ $(document).ready( function(){
 	$.ajaxSetup({
 			headers:{
 					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
-					}
+					},
+			beforeSend: function(){
+				//ad  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.modal-content').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				$('#myModal').modal('hide');
+				
+			}
 	});
 	//load homepage
 	$.ajax({
@@ -10,7 +23,8 @@ $(document).ready( function(){
 			type:"GET",
 			url:"/admin/home",
 			success:function(data){
-				$("body").empty().html(data);
+				$(".magic").empty().html(data);
+				//$("#myModal").modal('hide');
 				//alert("sucess");
 				
 			}
@@ -54,8 +68,9 @@ $(document).ready( function(){
 				type:"GET",
 				url:"/del/message/"+mid,
 				success:function(data){
-					//cla.empty().html(data);
-					alert(data);
+					$('#Msg_modal').modal('show');
+					$('.modal-body').empty().html(data);
+					
 					
 				}
 				
@@ -74,7 +89,9 @@ $(document).ready( function(){
 				url:"/del/order/"+di,
 				success:function(data){
 					//cla.empty().html(data);
-					alert(data);
+					//alert(data);
+					$('#Msg_modal').modal('show');
+					$('.modal-body').empty().html(data);
 					
 				}
 				
@@ -99,8 +116,8 @@ $(document).ready( function(){
 				 },
 				success:function(data){
 					//cla.empty().html(data);
-					alert(data);
-					
+					//alert(data);
+					$(".admin_content").empty().html(data);
 				}
 				
 				

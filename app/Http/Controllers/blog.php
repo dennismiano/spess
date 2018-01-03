@@ -162,5 +162,13 @@ class blog extends Controller
 	  
 		
 	}
+	//return user view post
+	public function u_view(Request $request,post $post){
+		 $ap=$post::orderBy("created_at","desc")->SimplePaginate(5);
+		 return view("post.user_view",["post"=>$ap]);
+	  
+		
+	}
+	
 	
 }
