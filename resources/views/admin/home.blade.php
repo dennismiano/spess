@@ -10,19 +10,18 @@
             </div>
             
             <div class="row">
-               <div class="admin-panel-content">
+                        <div class="col-md-2 col-xs-3">
                             <div class="admin-panel-menu">
                                     <li><a href="/view/message" class="load_ajax" cl="admin_content"><i class="fa  fa-comments adminmenu-icon"></i><span class="hide-element">&nbsp Messages</span></a></li>
                                     <li><a href="/view/order" class="load_ajax" cl="admin_content"><i class="fa  fa-shopping-cart adminmenu-icon"></i><span class="hide-element">&nbsp Orders</span></a></li>
                                     <li><a href="/view/post" class="load_ajax" cl="admin_content"> <i class="fa  fa-align-left adminmenu-icon"></i><span class="hide-element">&nbsp Blog</span></a></li>
                             </div>
                         </div>
-
                         
+                        <div class="col-md-10 col-xs-9">   
                             <div class="admin_content">
-                                
                             </div>
-               </div>
+                        </div>
             </div>
 <!--
             <div class="row">
