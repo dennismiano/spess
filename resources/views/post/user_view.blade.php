@@ -1,5 +1,5 @@
 <div>
-   @if( isset($post)  && $->isNotEmpty($post)   )
+   @if( isset($post)  && $post->isNotEmpty($post)   )
 	   @foreach( $post as $value)
             <div>
 			{{$value->created_at->diffForHumans()}}<br>
@@ -7,7 +7,8 @@
 			{{$value->name}}<br>
 			{{$value->category}}<br>
 			{{$value->body}}<br>
-			<button type="button" class="user_reply">Reply</button>
+			image:<img  class="img-responsive blog-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" /><br>
+			<button type="button" class="user_reply">Comment</button>
 			<button type="button" class="">share</button>
 			<button type="button" class="">Like</button>
 			

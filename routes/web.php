@@ -60,6 +60,9 @@ Route::get('/view/pic/{cat}', 'blog@del_cmt');
 Route::get('/save/pic', 'blog@del_cmt');
 //delete uploaded pics
 Route::get('/del/pic', 'blog@del_cmt');
+//user view post
+Route::get('/user/blog', 'blog@u_view');
+
 
 
  /*

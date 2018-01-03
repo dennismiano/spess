@@ -32,7 +32,7 @@ class confirm extends Mailable
      */
     public function build()
     {
-        return $this->from('spess@sharubati.com')
+        return $this->from('spess@sharubati.com','spearspeek')
 		->view('emails.confirm.co')->with(["msg"=>$this->ms,"name"=>$this->name]);
     }
 }
