@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => env('MAILGUN_DOMAIN','mg.sharubati.com'),
+        'secret' => env('MAILGUN_SECRET','key-6783b208d35112036035bc8fe457e47b'),
     ],
 
     'ses' => [
