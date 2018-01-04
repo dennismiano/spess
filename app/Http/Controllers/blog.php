@@ -164,8 +164,17 @@ class blog extends Controller
 	}
 	//return user view post
 	public function u_view(Request $request,post $post){
-		 $ap=$post::orderBy("created_at","desc")->SimplePaginate(5);
-		 return view("post.user_view",["post"=>$ap]);
+		 //$ap=$post::orderBy("created_at","desc")
+		 $recent=$post::orderBy("created_at","desc")->first();
+		 $list=$post::orderBy("created_at","desc")->SimplePaginate(5);
+		 return view("post.user_view",["post"=>$list]);
+	  
+		
+	}
+	//return user view comment
+	public function user_cmt(int $id,Request $request,comment $cmt){
+		 $ap=$cmt::orderBy("created_at","desc")->where('post_id',$id)->SimplePaginate(5);
+		 return view("cmt.user_view",["cmt"=>$ap,"post_id"=>$id]);
 	  
 		
 	}

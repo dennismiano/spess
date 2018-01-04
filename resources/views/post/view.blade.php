@@ -78,7 +78,7 @@
 		<div class="recent-blogs">
 			<h3 class="recent-blogs-header">Recent Blogs</h3>
 				@if( isset($post)  && $post->isNotEmpty()   )	
-		
+		               Total Posts:{{$post->count()}}
 					   @foreach( $post as $value)
 							<div class="post_div">
 								<div class="row">
@@ -92,7 +92,8 @@
 										
 										<a href="#" class="view_cmt" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$value->comments()->count()}})</span></a>&nbsp;&nbsp;
 										<a href="#" class="edit_post" id="{{$value->id}}"><span class="blue"><i class="fa fa-pencil-square-o"></i> update</span></a>&nbsp;&nbsp;
-										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> delete</span></a>
+										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> delete</span></a>&nbsp;&nbsp;
+										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> view</span></a>
 									</div>
 								</div>
 							</div>

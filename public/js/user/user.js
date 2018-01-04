@@ -5,12 +5,17 @@ $(document).ready( function(){
 					},
 			beforeSend:function(){
 				var spinner=" <div class='loader'></div> ";
-				$("#empty_model").modal("show");
+				$("#em_mod").modal("show");
 				$('.modal-content').empty().html(spinner);
 			},
-			complete: function(){
-				$('#empty_model').modal('hide');
+		   complete: function(){
+				$("#em_mod").modal("hide");
+				//alert("test");
 				
+			},
+			error:function(data){
+				//$("#em_mod").modal("hide");
+				$("body").empty().html(data);
 			}
 	});
 	//capture all links
@@ -50,7 +55,7 @@ $(document).ready( function(){
 			
 			success:function(data){
 				$(".msg_form")[0].reset();
-				alert(data);
+				//alert(data);
 				//alert("sucess");
 				
 			}
@@ -74,8 +79,8 @@ $(document).ready( function(){
 			contentType:false,
 			
 			success:function(data){
-				$(".op")[0].reset();
-				alert(data);
+				//$(".op")[0].reset();
+				//alert(data);
 				//alert("sucess");
 				
 			}
@@ -83,6 +88,56 @@ $(document).ready( function(){
 		});
 		
 	}   );
+	//user view cmt
+	$("body").on("click",".user_reply",function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var id=$(this).attr("id");
+		var cla=$(this).parents(".post_div");
+			$.ajax({
+			async:true,
+			type:"GET",
+			url:"/user/cmt/"+id,
+			success:function(data){
+				cla.append(data);
+				//alert("sucess");
+				
+			}
+			
+			
+		});
+		
+		
+		
+	});
+	//capture all post pagination links
+	$(".pagination").on("click","a",function(e){
+		//alert("test");
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var ur=$(this).attr("href");
+		var hii=$(this);
+		$.ajax({
+			async:true,
+			type:"GET",
+			url:ur,
+			success:function(data){
+				//cla.append(data);
+				//alert("sucess");
+				hii.parents(".poat_page").empty().html(data);
+				
+			}
+			
+			
+		});
+		//alert("test");
+		
+		
+		
+		
+		
+	});
+	
 	
 
 }  );

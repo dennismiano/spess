@@ -62,6 +62,9 @@ Route::get('/save/pic', 'blog@del_cmt');
 Route::get('/del/pic', 'blog@del_cmt');
 //user view post
 Route::get('/user/blog', 'blog@u_view');
+//user view cmt
+Route::get('/user/cmt/{id}', 'blog@user_cmt');
+
 
 
 

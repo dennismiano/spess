@@ -74,8 +74,7 @@ $(document).ready( function(){
 					
 				}
 				
-				
-			   });
+				});
 		 }   );
 	} );
 	//del orders

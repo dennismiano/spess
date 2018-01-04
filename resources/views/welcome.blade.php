@@ -1,26 +1,27 @@
-<!doctype html>
+<!doctype html5>
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		  
         <meta name="viewport" content="width=device-width, initial-scale=1">
+		 
 		<script src="{{ URL::asset('/js/jquery-3.2.1.min.js')}}"></script>
+		<script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
         <script src="{{ URL::asset('/js/bootstrap.min.js')}}" ></script>
-        <title>SPESS Rental Services</title>
+		<script src="{{ URL::asset('/js/user/user.js')}}"></script>
+		 <script src="{{ URL::asset('/js/slick.js')}}"></script>
+		
+		 
+        <title>SPESS Rental  Services</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:800|Signika:300,400,600" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
+        
         <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/slick.css')}}" rel="stylesheet">
-        <link href="{{ URL::asset('/css/popup.css')}}" rel="stylesheet">
-
-       
-		<script src="{{ URL::asset('/js/user/user.js')}}"></script>
-        <script src="{{ URL::asset('/js/jquery-ui.min.js')}}"></script>
-        <script src="{{ URL::asset('/js/slick.js')}}"></script>
-		{{--<script src="{{ URL::asset('/js/bootstrap.bundle.js')}}"></script> --}}   
+		<link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
 		<style>
 				.loader {
 				border: 5px solid #f3f3f3; /* Light grey */
@@ -64,54 +65,6 @@
                 </div>
             </div>
 
-<!--ORDER FORM STARTS HERE-->
-{{-- <div class="popup" data-popup="popup-1">
-                    <div class="popup-inner">
-                        <h2 classs="hid">We'd like to hear from you</h2>
-
-                        <div class="form-bg subject">
-        
-                                <div class="row hid">
-                                </div>
-
-                                <div class="row more-form-body ">
-                                     <form class="op">
-                                     {{csrf_field()}}
-                                      <div class="form-group">
-                                       <select type="text" class="form-control" name="serv">
-                                         <option>--Which service would you like us to quote for</option>
-                                         <option>Heavy equipment transportion</option>
-                                         <option>General & Specialized construction equipment</option>
-                                         <option>Supply of Protective Equipment</option>
-                                         <option>General Logistics Support</option>
-                                       </select>
-                                      </div>
-                                      
-                                      <div class="form-group">
-                                        <input type="text" class="form-control"  placeholder="your name" name="name">
-                                      </div>
-                                      
-                                      <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="your email" name="em">
-                                      </div>
-
-                                      <div class="form-group "  >
-                                        <input type="text" class="form-control"  placeholder="mobile number" name="ph">
-                                      </div>
-
-                                      <button type="submit" class="spess-cta"><b class="">Get a Quote</b> <i class="fa fa-paper-plane"></i></button>
-                                    </form>
-                                </div>
-                        </div> 
-
-
-                        <p><a data-popup-close="popup-1" href="#" class="hid">Close</a></p>
-                        <a class="popup-close" data-popup-close="popup-1" class="hid" href="#">x</a>
-
-                        </div>
-                </div>
---}}
-<!--END OF ORDER FORM-->
 <div class="content-load">
             <div class="row">
                 <div class="spess-heroslider">
@@ -390,7 +343,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM4nUO7TbbgthUAw__ApRCsWY57cqv6Ls&callback=initMap">
         </script>
 		<!--  Loading Modal -->
-<div id="empty_model" class="modal fade" role="dialog" data-backdrop="static">
+<div id="em_mod" class="modal fade" role="dialog" data-backdrop="static">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -435,7 +388,7 @@
 			 {{csrf_field()}}
 			  <div class="form-group">
 			   <select type="text" class="form-control" name="serv">
-				 <option>--Which service would you like us to quote for</option>
+				 <option>Which service would you like us to quote for</option>
 				 <option>Heavy equipment transportion</option>
 				 <option>General & Specialized construction equipment</option>
 				 <option>Supply of Protective Equipment</option>
