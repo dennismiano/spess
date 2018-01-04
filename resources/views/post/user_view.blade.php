@@ -45,9 +45,7 @@
 							</div>
 				@endforeach
 				</div>
-				@if(  null !== $post->links() )
-				{{$post->links()}}
-			    @endif
+				
 			    </div>
 
 		   @else
