@@ -110,34 +110,6 @@ $(document).ready( function(){
 		
 		
 	});
-	//capture all post pagination links
-	$("body").on("click",$(".pagination").children("a"),function(e){
-		//alert("test");
-		e.preventDefault();
-		e.stopImmediatePropagation();
-		var udr=$(this).attr("href");
-		var hii=$(this);
-		$.ajax({
-			async:true,
-			type:"GET",
-			url:udr,
-			success:function(data){
-				//cla.append(data);
-				//alert("sucess");
-				$(".post_page").children("pagi_up").empty().html("testststst");
-				//alert(data);
-				
-			}
-			
-			
-		});
-		//alert("test");
-		
-		
-		
-		
-		
-	});
 	
 	
 
