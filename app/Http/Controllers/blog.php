@@ -178,6 +178,37 @@ class blog extends Controller
 	  
 		
 	}
+	//return user create cmt
+	public function user_create_cmt(Request $request,comment $cmt){	
+	    if( $request->isMethod("POST")    ){
+			$det=[
+			 "name"=>$request->name,
+			 "post_id"=>$request->post_id,
+			 "message"=>$request->message,
+			];
+			if($request->email){
+				$det["email"]=$request->email;
+			}
+			$cc=$cmt::create($det);
+			if($cc){
+				//return "Comment created successfully";
+				return redirect()->action("blog@user_cmt",[ "id"=>$request->post_id]);
+				
+			}
+			else{
+				return "Error failed to add comment.";
+			}
+			
+		}
+		else{
+			return abort(404);
+		}
+	   
+		
+	  
+		
+	}
+	
 	
 	
 }

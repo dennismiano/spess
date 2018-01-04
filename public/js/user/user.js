@@ -110,6 +110,33 @@ $(document).ready( function(){
 		
 		
 	});
+	//SAVE COMMENT
+	$("body").on("submit",".create_comment",function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var da=new FormData(this);
+		var cla=$(this).parents(".cmt_div");
+	    //alert("test");
+			$.ajax({
+			async:true,
+			type:"POST",
+			data:da,
+			url:"/new/user/cmt",
+			processData:false,
+			contentType:false,
+			success:function(data){
+				cla.empty().html(data);
+				//alert("sucess");
+				
+			}
+			
+			
+		});
+		
+		
+		
+	});
+	
 	
 	
 
