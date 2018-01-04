@@ -8,7 +8,7 @@ $(document).ready( function(){
 				$("#em_mod").modal("show");
 				$('.modal-content').empty().html(spinner);
 			},
-		   complete: function(){
+		   complete:function(){
 				$("#em_mod").modal("hide");
 				//alert("test");
 				
@@ -81,7 +81,7 @@ $(document).ready( function(){
 			success:function(data){
 				//$(".op")[0].reset();
 				//alert(data);
-				//alert("sucess");
+				alert("sucess");
 				
 			}
 			
@@ -111,20 +111,21 @@ $(document).ready( function(){
 		
 	});
 	//capture all post pagination links
-	$(".pagination").on("click","a",function(e){
+	$("body").on("click",$(".pagination").children("a"),function(e){
 		//alert("test");
 		e.preventDefault();
 		e.stopImmediatePropagation();
-		var ur=$(this).attr("href");
+		var udr=$(this).attr("href");
 		var hii=$(this);
 		$.ajax({
 			async:true,
 			type:"GET",
-			url:ur,
+			url:udr,
 			success:function(data){
 				//cla.append(data);
 				//alert("sucess");
-				hii.parents(".poat_page").empty().html(data);
+				$(".post_page").children("pagi_up").empty().html("testststst");
+				//alert(data);
 				
 			}
 			

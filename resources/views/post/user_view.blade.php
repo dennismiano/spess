@@ -23,10 +23,11 @@
 						</div>
 					</div>
 			
-			     <div class="poat_page">
+			     <div class="post_page">
 			     list div
+				 <div class="pagi_up" >
 			     @foreach( $post as $value)
-							<div class="post_div">
+							<div class="post_div  ">
 								<div class="row">
 								  
 									<div class="col-md-3">
@@ -43,6 +44,7 @@
 								</div>
 							</div>
 				@endforeach
+				</div>
 				@if(  null !== $post->links() )
 				{{$post->links()}}
 			    @endif
