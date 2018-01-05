@@ -116,7 +116,13 @@ $(document).ready( function(){
 				success:function(data){
 					//cla.empty().html(data);
 					//alert(data);
-					$(".admin_content").empty().html(data);
+					if(data){
+						$(".admin_content").empty().html("sucess");
+					}
+					else{
+						alert("emp");
+					}
+					
 				}
 				
 				
@@ -139,7 +145,7 @@ $(document).ready( function(){
 				 },
 				success:function(data){
 					$(".admin_content").empty().html(data);
-					//alert(data);
+					//alert("set");
 					
 				}
 				
@@ -167,8 +173,8 @@ $(document).ready( function(){
 					 alert(data);
 				 },
 				success:function(data){
-					$(".admin_content").empty().html(data);
-					//alert(data);
+					//$(".admin_content").empty().html(data);
+					alert(data);
 					
 				}
 				
