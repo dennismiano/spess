@@ -26,21 +26,25 @@
 	-moz-box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
 	box-shadow: 0px 0px 3px -1px rgba(184,184,184,1);
 	position: fixed;
-	padding-top: 5PX;
 	width: 100%;
 	background-color: #ffffff;
-	z-index: 999;
+	z-index: 99;
+}
+.spess-logo{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: black;
 }
 .menu{
 	list-style: none;
 	padding-top: 10px;
 }
 .menu li{
-	float:left;
 	font-family: 'Signika', sans-serif;
 	font-size: 13pt;
-	padding-right: 20px;
-	font-weight: 300pt;
+	border-bottom:1px solid #ebebeb;
 
 }
 .menu li a{
@@ -52,6 +56,26 @@
 .menu li a:hover{
 	color:#FF4000;
 }
+.responsive-btn{
+	padding:0;
+	margin-bottom: 0;
+}
+.breadcrumb{
+	padding:0;
+	max-width: 40px;
+	height: auto;
+}
+@media only screen and (min-width : 768px) {
+	.menu li{
+		float:left;
+		border-bottom:none;
+		font-weight: 300pt;
+	}
+	.menu{
+		float: right;
+	}
+}
+/***********************************************SPESS SLIDER*******************/
 .spess-heroslider{	
 	/*background-image: url("/images/syde-images/images/hero-image.jpg");*/
 	background-size: cover;
@@ -63,10 +87,11 @@
 	font-family: 'Signika', sans-serif;
 	color:#cccccc;
 	font-weight: 600;
-	padding-top: 200px;
+	padding-top: 100px;
 }
 .spess-heroslider h1{
 	font-family: 'Montserrat', sans-serif;
+	font-size:25pt;
 }
 .spess-cta{
 	padding:7px 40px;
@@ -78,6 +103,15 @@
 	color:#00acef;
 
 }
+.@media only screen and (min-width : 768px) {
+	.spess-heroslider h2{
+		padding-top: 200px;
+	}
+	.spess-heroslider h1{
+		font-size:40pt;
+	}
+}
+/*****************************************************SPESS SERVICES*****************************************/
 .services{
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -143,35 +177,31 @@
 .aboutus-wrapper{
 	padding-right:30px;
 }
-.vision{
+.services-wrapper{
 	background-color: #fff;
 	padding: 5px 20px;
 	margin-bottom: 30px;
-	border-top-right-radius: 20px;
-	border-bottom-left-radius: 20px;
 }
-.mision{
-	background-color: #fff;
-	padding: 5px 20px;
-	margin-bottom: 30px;
-	border-top-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
-.values{
-	background-color: #fff;
-	padding: 5px 20px;
-	border-top-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
+
 .service-iconsbg{
 	background-color: #00acef;
-	margin-right: -30px;
-	padding:15px 15px;
-	border-bottom-left-radius: 20px;
+	padding:5px 5px;
+	width:70px;
+	height: 70px;
+	margin-top: -15px;
+	margin-right: 15px;
+	float: left;
+	border-radius: 5px;
+
 }
+
 .service-icons{
 	width:100%;
 	height: auto;
+}
+.services-text{
+	clear:left;
+	padding-top: 15px;
 }
 .client-testimony{
 	padding-top: 100px;
@@ -199,11 +229,13 @@
 	padding-top: 15px;
 }
 .footer{
-	background-color: #666666;
+	background-image: url("/images/dottedbg.png");
+	background-repeat: repeat;
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
 .footermap-header{
+	border-top: 1px solid #ebebeb;
 	background-color: #fff;
 	padding:5px 10px 2px 10px;
 	border-top-left-radius: 5px;
@@ -330,14 +362,50 @@
 	padding-top: 20px;
 }
 
+/*******************************************************STYLING BLOG FRONT END******************/
+.most-recent-h1{
+	font-family: 'Signika', sans-serif;
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom:2px solid #ebebeb;
+}
+.recent-blog-wrapper{
 
-
-
-
-
-
-
-
+}
+.recent-blog-wrapper h2{
+	font-family: 'Signika', sans-serif;	
+}
+.blog-image{
+	width:100%;
+	height:300px;
+	overflow: hidden;	
+}
+.blog-image-inner{
+	width: 100%;
+	height: 100%;
+}
+.blog-title{
+	margin:0;
+	padding-bottom: 10px
+}
+.byline{
+	margin:0;
+	padding-bottom: 10px;
+}
+.blog-list{
+	background-color: #ebebeb;
+	padding: 10px 10px;
+	margin-top: 20px;
+}
+.moreblogs{
+	font-family: 'Signika', sans-serif;
+	font-weight: 600;
+	padding-bottom: 5px;
+	border-bottom:2px solid #ccc;
+}
+.blog-thumbnail{
+	
+}
 /********************************************************ADMIN STYLING************************/
 .admin-header{
 	border-top:10px solid #00acef;
@@ -497,7 +565,16 @@
 	background-color: #fff;
 	padding: 10px 10px;
 	margin-top: 10px;
+	margin-right: -30px;
+	margin-left: -30px;
 }
 .blogger-image{
 	width:100%;
+}
+
+@media only screen and (min-width : 768px) {
+		.post_div{
+			margin-right: 0;
+			margin-left: 0;
+		}
 }

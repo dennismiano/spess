@@ -50,19 +50,39 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="spess-header">
-                    <div class="container">
-                        <a class="load_ajax" href="/" cl="services"> <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
+                <nav class = "navbar" role = "navigation">
+                    <div class="spess-header">
+                        <div class="container">
+                            
+                            <!--Toggle Button-->
+                                <div class="navbar-header">
+   
+                                    <a href="#" class = "navbar-toggle responsive-btn pull-right" 
+                                         data-toggle = "collapse" data-target = "#spess-navbar-collapse"><img class="breadcrumb"  src = "{{ URL::asset('/images/breadcrumb.png')}}" alt = "logo">
+                                    </a>
 
-                        <ul class="menu pull-right">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="logistics" class="load_ajax" cl="content-load">Logistics Services</a></li>
-                            <li><a href="machinery" class="load_ajax" cl="content-load">Plant Machinery</a></li>
-                            <li><a href="protective-equipment" class="load_ajax" cl="content-load">Protective Equipment</a></li>
-                            <li><a href="/user/blog" class="load_ajax" cl="content-load">Blog</a></li>
-                        </ul>
+                                    <!--
+                                    <button type = "button" class = "navbar-toggle responsive-btn pull-right" 
+                                         data-toggle = "collapse" data-target = "#spess-navbar-collapse"><img class="breadcrumb"  src = "{{ URL::asset('/images/breadcrumb.png')}}" alt = "logo">
+                                    </button>
+                                    -->
+
+                                    <a class="load_ajax" href="/" cl="services"> <img class="spess-logo"  src = "{{ URL::asset('/images/spess.png')}}" alt = "logo"></a>
+                                </div>
+                                <!--Toggle button ends here-->
+
+                                    <div class = "collapse navbar-collapse" id ="spess-navbar-collapse">
+                                        <ul class="menu nav">
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="logistics" class="load_ajax" cl="content-load">Logistics Services</a></li>
+                                            <li><a href="machinery" class="load_ajax" cl="content-load">Plant Machinery</a></li>
+                                            <li><a href="protective-equipment" class="load_ajax" cl="content-load">Protective Equipment</a></li>
+                                            <li><a href="/user/blog" class="load_ajax" cl="content-load">Blog</a></li>
+                                        </ul>
+                                    </div>
+                        </div>
                     </div>
-                </div>
+                </nav>
             </div>
 
 <div class="content-load">
@@ -162,45 +182,47 @@
 
                                     <div class="col-md-7">
                                         <div class="row">
-                                                <div class="col-md-2 col-xs-2">
+                                                <div class="services-wrapper">
                                                     <div class="service-iconsbg">
                                                         <img class="service-icons"  src = "{{ URL::asset('/images/vision.png')}}" alt = "service-icon">
-                                                    </div>
-                                                </div>
 
-                                                <div class="col-md-10 col-xs-10">
-                                                    <div class="vision">
-                                                        <h4><span class="red">VISION</span></h4>
+                                                    </div>
+                                               
+                                                    <h4><span class="services-head red">VISION</span></h4>
+                                               
+                                                    <div class="services-text">
+                                                        
                                                         <p>To be the world leader in provision of equipment and related services, by doing this we will earn our client`s enthusiasm through continuous improvement driven by the integrity, teamwork and innovation of spess people to be a company that our shareholders and society want.</p>
                                                     </div>
                                                 </div>
+                                        
                                         </div>
 
                                         <div class="row">
-                                                <div class="col-md-2 col-xs-2">
+                                            <div class="services-wrapper">   
                                                     <div class="service-iconsbg">
                                                         <img class="service-icons"  src = "{{ URL::asset('/images/mission.png')}}" alt = "service-icon">
                                                     </div>
-                                                </div>
-
-                                                <div class="col-md-10 col-xs-10">
-                                                    <div class="mision">
-                                                        <h4><span class="red">MISSION</span></h4>
+                                                
+                                                    <h4><span class="services-head red">MISSION</span></h4>
+                                                
+                                                    <div class="services-text">
                                                         <p>We strive to set, by example the standards for excellence and ethics in our industry, by pledging ourselves to seek continuous improvement through team effort, to do “whatever it takes” to deliver exceptional performance for our customers</p>
                                                     </div>
-                                                </div>
+                                            </div> 
                                         </div>
 
+                                        
+
                                         <div class="row">
-                                                <div class="col-md-2 col-xs-2">
+                                            <div class="services-wrapper">    
                                                     <div class="service-iconsbg">
                                                         <img class="service-icons"  src = "{{ URL::asset('/images/values.png')}}" alt = "service-icon">
                                                     </div>
-                                                </div>
-
-                                                <div class="col-md-10 col-xs-10">
-                                                    <div class="values">
-                                                        <h4><span class="red">VALUES</span></h4>
+                                                    
+                                                    <h4><span class="services-head red">VALUES</span></h4>
+                                                
+                                                    <div class="services-text">
                                                         <p>SPESS operation is guided by the following values;
                                                            <ul>
                                                             <li class="spess-text"><b>Quality</b> - We strive at providing quality supplies and services that will earn our client`s enthusiasm.
@@ -214,7 +236,7 @@
                                                            </ul>
                                                         </p>
                                                     </div>
-                                                </div>
+                                            </div>  
                                         </div>
 
 
@@ -309,7 +331,7 @@
                 <div class="copy-right">
                     <div class="container">
 					 
-                        <p class="copyright-text">&copy {{ date('Y')}} Spearspeak Supplies & Servies</p>
+                        <p class="copyright-text">&copy {{ date('Y')}} Spearspeak Supplies & Services</p>
 						        
                     </div>
                 </div>
