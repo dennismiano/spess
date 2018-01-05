@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\post;
 use App\comment;
+use App\Events\postCreated;
 
 
 class blog extends Controller
@@ -29,7 +30,8 @@ class blog extends Controller
 			 }
 			 $np=$post::create($det);
 			 if($np){
-				 return "Post created successfully.";
+				 //return "Post created successfully.";
+				 event(new postCreated($post));
 			 }
 			 else{
 				return "Error.Couldn't create post."; 
@@ -71,7 +73,7 @@ class blog extends Controller
 			 "title"=>$request->title,
 			 "name"=>$request->name,
 			 "body"=>$request->body,
-			 "category"=>$request->cat,
+			 "category"=>$request->category,
 			
 			 ];
 		   if($request->id){
@@ -83,8 +85,6 @@ class blog extends Controller
 					 $file_types=$request->file("ff")->getMimeType() == "image/jpeg" || $request->file("ff")->getMimeType() == "image/png" || $request->file("ff")->getMimeType() == "image/gif";
 					if($file_types){
 						$det["files"]= file_get_contents($request->file("ff") );
-					//return pg_escape_bytea($det["files"]  );
-					  //return var_dump ( $det['files'] );
 						
 					}
 				 

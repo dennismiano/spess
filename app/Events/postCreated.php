@@ -9,19 +9,22 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use App\post;
 
 class postCreated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
+    public $post;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( post $post)
     {
         //
+		return $this->post=$post;
+		
     }
 
     /**
