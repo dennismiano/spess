@@ -5,12 +5,17 @@ $(document).ready( function(){
 					},
 			beforeSend:function(){
 				var spinner=" <div class='loader'></div> ";
-				$("#empty_model").modal("show");
+				$("#em_mod").modal("show");
 				$('.modal-content').empty().html(spinner);
 			},
-			complete: function(){
-				$('#empty_model').modal('hide');
+		   complete:function(){
+				$("#em_mod").modal("hide");
+				//alert("test");
 				
+			},
+			error:function(data){
+				//$("#em_mod").modal("hide");
+				$("body").empty().html(data);
 			}
 	});
 	//capture all links
@@ -50,7 +55,7 @@ $(document).ready( function(){
 			
 			success:function(data){
 				$(".msg_form")[0].reset();
-				alert(data);
+				//alert(data);
 				//alert("sucess");
 				
 			}
@@ -74,15 +79,65 @@ $(document).ready( function(){
 			contentType:false,
 			
 			success:function(data){
-				$(".op")[0].reset();
-				alert(data);
-				//alert("sucess");
+				//$(".op")[0].reset();
+				//alert(data);
+				alert("sucess");
 				
 			}
 			
 		});
 		
 	}   );
+	//user view cmt
+	$("body").on("click",".user_reply",function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var id=$(this).attr("id");
+		var cla=$(this).parents(".post_div");
+			$.ajax({
+			async:true,
+			type:"GET",
+			url:"/user/cmt/"+id,
+			success:function(data){
+				cla.append(data);
+				//alert("sucess");
+				
+			}
+			
+			
+		});
+		
+		
+		
+	});
+	//SAVE COMMENT
+	$("body").on("submit",".create_comment",function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var da=new FormData(this);
+		var cla=$(this).parents(".cmt_div");
+	    //alert("test");
+			$.ajax({
+			async:true,
+			type:"POST",
+			data:da,
+			url:"/new/user/cmt",
+			processData:false,
+			contentType:false,
+			success:function(data){
+				cla.empty().html(data);
+				//alert("sucess");
+				
+			}
+			
+			
+		});
+		
+		
+		
+	});
+	
+	
 	
 
 }  );
