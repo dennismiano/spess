@@ -3,6 +3,7 @@
 
 	<div class="col-md-6">
 		<div class="blogform-section">
+		{{-- view update div --}}
 				@if(isset($up_post)  )
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Edit article</span></h3>
 					
@@ -39,7 +40,8 @@
 						   
 						 </form>
 
-				@else
+				@endif
+				{{--  End view update div --}}
 					
 				@if(isset($one)  )
 						<div class="one_div">
@@ -61,8 +63,8 @@
 									</div>
 								</div>
 					</div>
-						
-					@else
+				@endif	
+				    @if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )
 					<div  class="one_post">
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Create a new article</span></h3>
 							
@@ -129,15 +131,10 @@
 				@if( ! isset($up_post) && ! isset($one) )
 					   <p>No posts to display.</p>
 				@endif
+		@endif
 		</div>		   
 	</div>
 
-
-
-				
-			
-		@endif
-@endif
 
  
 	<script src="[ckeditor-build-path]/ckeditor.js"></script>	
