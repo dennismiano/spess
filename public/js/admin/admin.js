@@ -197,7 +197,7 @@ $(document).ready( function(){
 			   });
 	});
 	//view cmt
-	$("body").on("click",".view_cmt",  function(e) {
+	$("body").on("click",".view_cmt",function(e) {
 				e.preventDefault();
 				e.stopImmediatePropagation();
 				var hii= $(this);
@@ -211,7 +211,7 @@ $(document).ready( function(){
 					 alert(data);
 				 },
 				success:function(data){
-					hii.parents(".post_div").append(data);
+					hii.parents(".one_up").append(data);
 					//alert(data);
 					
 				}

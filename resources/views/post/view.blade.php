@@ -1,7 +1,7 @@
        <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
         
 
-	<div class="col-md-6">
+	<div class="col-md-7">
 		<div class="blogform-section">
 				@if(isset($up_post)  )
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Edit article</span></h3>
@@ -43,12 +43,12 @@
 					
 				@if(isset($one)  )
 						<div class="one_div">
-								<div class="row">
+								<div class="row ">
 									<div class="col-md-3">
 										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
 									</div>
 
-									<div class="col-md-9">
+									<div class="col-md-9 ">
 										<h4>{{$one->title}}</h4>
 										<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
 										   
@@ -100,7 +100,7 @@
 			</div>
 	</div>
 	@if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )	
-	<div class="col-md-6">
+	<div class="col-md-5">
 		<div class="recent-blogs">
 			<h3 class="recent-blogs-header">Recent Blogs</h3>
 				
