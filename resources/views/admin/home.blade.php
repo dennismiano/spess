@@ -22,15 +22,21 @@
                             <div class="admin_content">
                                     <div class="row">
                                         <div class="message-holder">
-                                                    <img class="no-message-icon"  src = "{{ URL::asset('/images/empty-orders.png')}}" alt = "logo">
+                                                    <img class="no-message-icon"  src = "{{ URL::asset('/images/admin-panel-img.png')}}" alt = "logo">
 
                                                         <div class="no-message-msg">
-                                                            <h1 class=""> No quotes requested!</h1>
-                                                            <p>Seems like no one has requested for a quote yet.</p>
+                                                            <h1 class="">Welcome Admin,</h1>
+                                                            <p>View, Edit, Update & Delete information with ease.</p>
                                                         </div>
                                                     <div class="how-it-works">
                                                             <h3>How it Works</h3>
-                                                            <p>The orders section receives quotation requests from clients who have already shown willingness to purchase a certain service.</p>
+
+                                                            <div class="col-md-2">
+                                                            </div>
+
+                                                            <div class="col-xs-10">
+                                                                <p>The orders section receives quotation requests from clients who have already shown willingness to purchase a certain service.</p>
+                                                            </div>
                                                     </div>
                                         </div>
                                     </div>
