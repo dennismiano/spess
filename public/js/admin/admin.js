@@ -268,7 +268,7 @@ $(document).ready( function(){
 			   });
 		
 	} );
-	//view post
+	//view  one post
 	$("body").on("click",".view_post",  function(e) {
 		e.preventDefault();
 		e.stopImmediatePropagation();

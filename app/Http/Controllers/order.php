@@ -24,7 +24,7 @@ class order extends Controller
 			$mssg_em="Thank you for choosing us .Our sales team will email you a quote for ".$request->serv.".";
 			$or_name=$request->name;
 			$send_con=Mail::to($mals)->send(new confirm($mssg_em,$or_name));
-			$mssg="Success.A confirmation email has been sent to".$request->em.".";
+			$mssg="Success.A confirmation email has been sent to ".$request->em.". We'll email you a quote.";
 			if( !$send_con ){
 				return $mssg;
 			}

@@ -74,7 +74,7 @@
 </div>
 @endif
 
-//view one post
+{{-- view one post --}}
 @if(isset($one)  )
 	 <div class="post_div ">
 		<div class="row">
@@ -89,8 +89,11 @@
 				<div class="col-md-9 ">
 					<h4>{{$one->title}}</h4>
 					<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
+		                                   Body:{{$one->body}}<br>
+										    
+										    Category:{{$one->category}}<br>
 					
-					<a  class="view_cmt user_reply" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
+					<a  class=" user_reply" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
 					
 				</div>
 			</div>
