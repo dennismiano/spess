@@ -10,7 +10,6 @@ $(document).ready( function(){
 			},
 		   complete:function(){
 				$("#em_mod").modal("hide");
-				//alert("test");
 				
 			},
 			error:function(data){
@@ -70,6 +69,9 @@ $(document).ready( function(){
 		e.stopImmediatePropagation();
 		//alert("data");
 		var da= new FormData(this);
+		var rst=$(this)[0].reset();
+		rst;
+		$("#q_modal").modal("hide");
 		$.ajax({
 			async:true,
 			type:"POST",
@@ -77,15 +79,17 @@ $(document).ready( function(){
 			url:"/new/order",
 			processData:false,
 			contentType:false,
-			
 			success:function(data){
 				//$(".op")[0].reset();
-				//alert(data);
-				alert("sucess");
+				//$("#em_mod").modal("hide");
+				$("#Msg_modal").modal("show");
+				$("#Msg_modal").children(".modal-body").empty().html(data);
+				//alert("sucess");
 				
 			}
 			
-		});
+		}); 
+		//alert("sucess");
 		
 	}   );
 	//user view cmt
@@ -136,6 +140,29 @@ $(document).ready( function(){
 		
 		
 	});
+	//view selected post
+	$("body").on("click",".view_post",function(e){
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		var id=$(this).attr("id");
+	    //alert("test");
+			$.ajax({
+			async:true,
+			type:"GET",
+			url:"/user/view/blog/"+id,
+			success:function(data){
+				$(".one_div").empty().html(data);
+				//alert("sucess");
+				
+			}
+			
+			
+		});
+		
+		
+		
+	});
+	
 	
 	
 	

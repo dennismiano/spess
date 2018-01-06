@@ -35,11 +35,31 @@
 							  
 							  Replace with:<input type="file"  name="ff" /><br>
 							  <button type="submit" class="btn btn-success">Update blog</button>
-							  <button type="button" class="btn btn-warning" href="/view/post" class="load_ajax" cl="admin_content">Cancel</button>
+							  <button type="button" class="btn btn-warning load_ajax" href="/view/post" cl="admin_content">Cancel</button>
 						   
 						 </form>
 
 				@else
+					
+				@if(isset($one)  )
+						<div class="one_div">
+								<div class="row">
+									<div class="col-md-3">
+										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
+									</div>
+
+									<div class="col-md-9">
+										<h4>{{$one->title}}</h4>
+										<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
+										
+										<a href="#" class="view_cmt" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$one->comments()->count()}})</span></a>&nbsp;&nbsp;
+										
+									</div>
+								</div>
+					</div>
+						
+					@else
+					<div  class="one_post">
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Create a new article</span></h3>
 							
 							<form class="ad_post" >
@@ -71,14 +91,16 @@
 									  </div>
 									  <button type="submit" class="publish-btn" >Publish blog <i class="fa fa-plus-circle"></i></button> 
 							 </form>
+					 </div>
+					 @endif
 			</div>
 	</div>
-	
+	@if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )	
 	<div class="col-md-6">
 		<div class="recent-blogs">
 			<h3 class="recent-blogs-header">Recent Blogs</h3>
-				@if( isset($post)  && $post->isNotEmpty()   )	
-		               Total Posts:{{$post->count()}}
+				
+		               Total Posts:{{$cnt}}
 					   @foreach( $post as $value)
 							<div class="post_div">
 								<div class="row">
@@ -90,17 +112,17 @@
 										<h4>{{$value->title}}</h4>
 										<p>Posted {{$value->created_at->diffForHumans()}} by {{$value->name}}</p>
 										
-										<a href="#" class="view_cmt" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$value->comments()->count()}})</span></a>&nbsp;&nbsp;
+										<i class="fa fa-commenting"></i> comments({{$value->comments()->count()}})</span>&nbsp;&nbsp;
 										<a href="#" class="edit_post" id="{{$value->id}}"><span class="blue"><i class="fa fa-pencil-square-o"></i> update</span></a>&nbsp;&nbsp;
 										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> delete</span></a>&nbsp;&nbsp;
-										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> view</span></a>
+										<a href="#" class="view_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> view</span></a>
 									</div>
 								</div>
 							</div>
 					   @endforeach
 			  
 			@else
-				@if( ! isset($up_post)  )
+				@if( ! isset($up_post) && ! isset($one) )
 					   <p>No posts to display.</p>
 				@endif
 		</div>		   

@@ -1,12 +1,12 @@
- 	
+ @if( isset($post)  && $post->isNotEmpty($post)   )	
 <div class="row">
 	<div class="container">
 	
 		<div class="col-md-8">
-		 	@if( isset($post)  && $post->isNotEmpty($post)   )
+		 	
 				
 			     
-				    <div class="post_div">
+				    <div class="post_div one_div">
 
 						 <h1 class="red most-recent-h1"> Most Recent Story</h1>
 							<div class="recent-blog-wrapper">
@@ -37,7 +37,7 @@
 					<h2 class="moreblogs blue">More Blogs</h2>
 					     @foreach( $post as $value)
 									
-									<div class="post_div ">
+									<div class="post_div  ">
 										<div class="row">
 										 
 										 	<div class="blog-thumbnail">
@@ -51,8 +51,8 @@
 													<h4>{{$value->title}}</h4>
 													<p>Posted {{$value->created_at->diffForHumans()}} by {{$value->name}}</p>
 													
-													<a  class="view_cmt user_reply" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$value->comments()->count()}})</span></a>
-													
+													<span class="blue"><i class="fa fa-commenting " ></i> comments({{$value->comments()->count()}})</span>
+													<a  class="view_post" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting " ></i> View</span></a>
 												</div>
 											</div>
 										</div>
@@ -61,8 +61,10 @@
 						</div>	
 					 </div>
 				   @else
+					   @if(  ! isset($one)   )
 					   <p>No posts yet.</p>
-				   @endif
+				       @endif
+				   
 			</div>
 
 			
@@ -70,3 +72,29 @@
 		</div>
 	</div>
 </div>
+@endif
+
+//view one post
+@if(isset($one)  )
+	 <div class="post_div ">
+		<div class="row">
+		 
+			<div class="blog-thumbnail">
+				<div class="col-md-3">
+					<div class="blog-list-image">
+						<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
+					</div>
+				</div>
+
+				<div class="col-md-9 ">
+					<h4>{{$one->title}}</h4>
+					<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
+					
+					<a  class="view_cmt user_reply" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+@endif

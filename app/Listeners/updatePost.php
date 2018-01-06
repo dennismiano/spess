@@ -6,9 +6,8 @@ use App\Events\postCreated;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class updatePosts  implements ShouldQueue
+class updatePost
 {
-	use InteractsWithQueue;
     /**
      * Create the event listener.
      *
@@ -28,6 +27,5 @@ class updatePosts  implements ShouldQueue
     public function handle(postCreated $event)
     {
         //
-		return redirect()->route("/");
     }
 }

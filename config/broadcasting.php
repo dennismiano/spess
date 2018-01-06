@@ -14,7 +14,6 @@ return [
     | Supported: "pusher", "redis", "log", "null"
     |
     */
-
     'default' => env('BROADCAST_DRIVER', 'pusher'),
 
     /*
@@ -37,6 +36,8 @@ return [
             'app_id' => env('PUSHER_APP_ID','453733'),
             'options' => [
                 //
+				'cluster' => 'mt1',
+               'encrypted' => true
             ],
         ],
 

@@ -31,7 +31,8 @@ class blog extends Controller
 			 $np=$post::create($det);
 			 if($np){
 				 //return "Post created successfully.";
-				 event(new postCreated($post));
+				 //event(new postCreated($np));
+				 return redirect()->action("blog@view_post");
 			 }
 			 else{
 				return "Error.Couldn't create post."; 
@@ -47,7 +48,8 @@ class blog extends Controller
 	public function del_post(int $id, post $post){
 		$dp=$post::destroy($id);
 		if($dp){
-			return "Post deleted successfully.";
+			//return "Post deleted successfully.";
+			 return redirect()->action("blog@view_post");
 		}
 		else{
 			return "Error.Couldn't delete post.";
@@ -91,7 +93,8 @@ class blog extends Controller
 				 }
 				$up=$fp->update($det);
 				if($up){
-					return "Post updated.";
+					//return "Post updated.";
+					 return redirect()->action("blog@view_post");
 				}
 				else{
 					return "Error.Failed to update.";
@@ -109,9 +112,10 @@ class blog extends Controller
 		
 	}
 	//return all posts
-	public function view_post (Request $request ,post $post){
+	public function view_post (post $post){
 		$ap=$post::orderBy("created_at","desc")->SimplePaginate(5);
-		return view("post.view",["post"=>$ap]);
+		$cnt=$post::orderBy("created_at","desc")->count();
+		return view("post.view",["post"=>$ap,"cnt"=>$cnt]);
 		
 	}
 	//create comment
@@ -207,6 +211,21 @@ class blog extends Controller
 		
 	  
 		
+	}
+	//admin view one post
+	public function one_post(int $id,post $post){
+		$one_p=$post::find($id);
+		if($one_p){
+			return view("post.view",["one"=>$one_p]);
+		}
+		
+	}
+	//user view one post
+	public function user_view_blog(int $id,post $post){
+		$one_p=$post::find($id);
+		if($one_p){
+			return view("post.user_view",["one"=>$one_p]);
+		}
 	}
 	
 	
