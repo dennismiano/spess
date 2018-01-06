@@ -4,12 +4,11 @@ $(document).ready( function(){
 					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
 					},
 			beforeSend:function(){
-				var spinner=" <div class='loader'></div> ";
-				$("#em_mod").modal("show");
-				$('.modal-content').empty().html(spinner);
+				$("#empty_mod").modal("show");
+				$('.modal-content').empty().html(" <div class='loader'></div> ");
 			},
 		   complete:function(){
-				$("#em_mod").modal("toggle");
+				$("#empty_mod").modal("hide");
 				
 			},
 			error:function(data){
@@ -51,13 +50,10 @@ $(document).ready( function(){
 			url:'/new/message',
 			processData:false,
 			contentType:false,
-			
 			success:function(data){
-				$(".msg_form")[0].reset();
-				$("#Msg_modal").modal("show");
-				$("#Msg_modal").children(".modal-body").empty().html(data);
-				//alert(data);
-				//alert("sucess");
+			  $("#Msg_modal").modal("show");
+				
+				
 				
 			}
 			
@@ -84,7 +80,7 @@ $(document).ready( function(){
 			contentType:false,
 			success:function(data){
 				//rst.parents(".modal-body").empty().html(data);
-				$("#em_mod").modal('toggle');
+				//$("#em_mod").modal('toggle');
 				alert(data);
 				
 			}
@@ -164,11 +160,13 @@ $(document).ready( function(){
 		
 	});
 // user view comment
-$("body").on("click",".u_view  ",function(e){
+$("body").on("click",".u_view",function(e){
 	 e.preventDefault();
 	 e.stopImmediatePropagation();
+	 
 	 	var id=$(this).attr("id");
 		var hii=$(this);
+		hii.removeClass("u_view");
 	    //alert("test");
 			$.ajax({
 			async:true,
@@ -185,6 +183,8 @@ $("body").on("click",".u_view  ",function(e){
 		
 		
 }   );
+
+
 	
 	
 	

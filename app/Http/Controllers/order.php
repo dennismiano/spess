@@ -30,6 +30,7 @@ class order extends Controller
 			}
 			else{
 				return "Success.Failed to send a confirmation email.";
+				//
 			}
 		}
 		else{
@@ -40,14 +41,16 @@ class order extends Controller
 	//view orders
 	public function view_order( Request $request,  orders $orders ){
 	     $o=$orders::orderBy('created_at','desc')->SimplePaginate(5);
-		 return view("orders.view",["orders"=>$o]);
+		 $noo=$orders::all()->count();
+		 return view("orders.view",["orders"=>$o,"numbers"=>$noo]);
 		
 	}
 	//delete order
 	public function del_order( int $id,Request $request,  orders $orders ){
 	     $o=$orders::destroy($id);
 		 if($o){
-			 return "order deleted successfully";
+			 //return "order deleted successfully";
+			 return redirect()->action("order@view_order");
 		    }
 	     else{
 			 return "Error.Failed to delete order.";

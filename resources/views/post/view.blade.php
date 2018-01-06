@@ -3,6 +3,7 @@
 
 	<div class="col-md-7">
 		<div class="blogform-section">
+		{{-- view update div --}}
 				@if(isset($up_post)  )
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Edit article</span></h3>
 					
@@ -39,16 +40,17 @@
 						   
 						 </form>
 
-				@else
+				@endif
+				{{--  End view update div --}}
 					
 				@if(isset($one)  )
-						<div class="one_div">
-								<div class="row ">
+						<div class="">
+								<div class="row">
 									<div class="col-md-3">
 										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
 									</div>
 
-									<div class="col-md-9 ">
+									<div class="col-md-9  one_div">
 										<h4>{{$one->title}}</h4>
 										<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
 										   
@@ -61,8 +63,8 @@
 									</div>
 								</div>
 					</div>
-						
-					@else
+				@endif	
+				    @if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )
 					<div  class="one_post">
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Create a new article</span></h3>
 							
@@ -130,15 +132,10 @@
 				@if( ! isset($up_post) && ! isset($one) )
 					   <p>No posts to display.</p>
 				@endif
+		@endif
 		</div>		   
 	</div>
 
-
-
-				
-			
-		@endif
-@endif
 
  
 	<script src="[ckeditor-build-path]/ckeditor.js"></script>	
