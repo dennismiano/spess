@@ -6,7 +6,7 @@
 		 	
 				
 			     
-				    <div class="post_div one_div">
+				    <div class="view_div">
 
 						 <h1 class="red most-recent-h1"> Most Recent Story</h1>
 							<div class="recent-blog-wrapper">
@@ -18,13 +18,13 @@
 										<img  class="img-responsive blog-image-inner"  src="data:image/jpeg;base64,<?php echo base64_encode( $post->first()->files); ?>" />
 									</div>
 
-									<div class="recent-blog-body">
+									<div class="recent-blog-body load_cmt">
 										<p>{!!$post->first()->body!!}</p>
-										<a  class="view_cmt user_reply" id="{{$post->first()->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$post->first()->comments()->count()}})</span></a>
+										<a  class="u_view" id="{{$post->first()->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$post->first()->comments()->count()}})</span></a>
 									
 									</div>
 							</div>
-						</div>
+					</div>
 		</div>
 
 		<div class="col-md-4">
@@ -76,7 +76,7 @@
 
 {{-- view one post --}}
 @if(isset($one)  )
-	 <div class="post_div ">
+	 <div class="one_post_div ">
 		<div class="row">
 		 
 			<div class="blog-thumbnail">
@@ -86,14 +86,14 @@
 					</div>
 				</div>
 
-				<div class="col-md-9 ">
+				<div class="col-md-9  one_com_up">
 					<h4>{{$one->title}}</h4>
 					<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
 		                                   Body:{{$one->body}}<br>
 										    
 										    Category:{{$one->category}}<br>
 					
-					<a  class=" user_reply" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
+					<a  class="one_cmt" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
 					
 				</div>
 			</div>

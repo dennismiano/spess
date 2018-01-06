@@ -43,12 +43,12 @@
 					
 				@if(isset($one)  )
 						<div class="one_div">
-								<div class="row">
+								<div class="row ">
 									<div class="col-md-3">
 										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
 									</div>
 
-									<div class="col-md-9">
+									<div class="col-md-9 ">
 										<h4>{{$one->title}}</h4>
 										<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
 										   

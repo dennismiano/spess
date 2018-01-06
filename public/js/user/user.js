@@ -9,7 +9,7 @@ $(document).ready( function(){
 				$('.modal-content').empty().html(spinner);
 			},
 		   complete:function(){
-				$("#em_mod").modal("hide");
+				$("#em_mod").modal("toggle");
 				
 			},
 			error:function(data){
@@ -37,7 +37,7 @@ $(document).ready( function(){
 		});
 		
 	}   );
-	//save 
+	//save msg
 	$("body").on("submit",".msg_form",function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
@@ -93,12 +93,12 @@ $(document).ready( function(){
 		//alert("sucess");
 		
 	}   );
-	//user view cmt
-	$("body").on("click",".user_reply",function(e){
+	//view one post return user view cmt
+	$("body").on("click",".one_cmt",function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
 		var id=$(this).attr("id");
-		var cla=$(this).parents(".cmt_div");
+		var cla=$(this).parents(".one_com_up");
 			$.ajax({
 			async:true,
 			type:"GET",
@@ -152,7 +152,7 @@ $(document).ready( function(){
 			type:"GET",
 			url:"/user/view/blog/"+id,
 			success:function(data){
-				$(".one_div").empty().html(data);
+				$(".view_div").empty().html(data);
 				//alert("sucess");
 				
 			}
@@ -163,6 +163,28 @@ $(document).ready( function(){
 		
 		
 	});
+// user view comment
+$("body").on("click",".u_view  ",function(e){
+	 e.preventDefault();
+	 e.stopImmediatePropagation();
+	 	var id=$(this).attr("id");
+		var hii=$(this);
+	    //alert("test");
+			$.ajax({
+			async:true,
+			type:"GET",
+			url:"/user/cmt/"+id,
+			success:function(data){
+				hii.parents(".load_cmt").append(data);
+				//alert("sucess");
+				
+			}
+			
+			
+		});
+		
+		
+}   );
 	
 	
 	
