@@ -68,27 +68,25 @@
 @endif
 
 
+{{-- view one post --}}
+
 @if(isset($one)  )
 	
 <div class="one-view">
 	 <div class="post_div ">
 		<div class="row">
 		 
-			<div class="blog-thumbnail">
-				<div class="col-md-3">
-					<div class="blog-list-image">
-						<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
-					</div>
-				</div>
+				<div class="blog-wrapper">
+					<h2 class="blog-title">{{$one->title}}</h2>
+					<p class="gray byline">Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
+						<div class="blog-image">
+							<img  class="img-responsive blog-image-inner"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
+						</div>
+		                 
+		                 <p class="spess-text">{!!$one->body!!}</p>
 
-				<div class="col-md-9 ">
-					<h4>{{$one->title}}</h4>
-					<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
-					
-					<a  class="view_cmt user_reply" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
-					
+						<a  class=" user_reply" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$one->comments()->count()}})</span></a>
 				</div>
-			</div>
 		  </div>
 		</div>
 	</div>

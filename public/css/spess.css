@@ -499,6 +499,10 @@
 .recent-blog-wrapper{
 
 }
+.blog-wrapper{
+	padding-left: 10px;
+	padding-right: 10px;
+}
 .recent-blog-wrapper h2{
 	font-family: 'Signika', sans-serif;	
 }
@@ -520,7 +524,8 @@
 }
 .blog-title{
 	margin:0;
-	padding-bottom: 10px
+	padding-bottom: 10px;
+	font-family: 'Signika', sans-serif;
 }
 .byline{
 	margin:0;

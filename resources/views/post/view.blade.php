@@ -51,7 +51,11 @@
 									<div class="col-md-9">
 										<h4>{{$one->title}}</h4>
 										<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
-										
+										   
+										   
+										   Body:{{$one->body}}
+										    
+										    Category:{{$one->category}}<br>
 										<a href="#" class="view_cmt" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$one->comments()->count()}})</span></a>&nbsp;&nbsp;
 										
 									</div>

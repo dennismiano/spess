@@ -54,6 +54,8 @@ $(document).ready( function(){
 			
 			success:function(data){
 				$(".msg_form")[0].reset();
+				$("#Msg_modal").modal("show");
+				$("#Msg_modal").children(".modal-body").empty().html(data);
 				//alert(data);
 				//alert("sucess");
 				
@@ -69,8 +71,9 @@ $(document).ready( function(){
 		e.stopImmediatePropagation();
 		//alert("data");
 		var da= new FormData(this);
-		var rst=$(this)[0].reset();
-		rst;
+		var rst=$(this);
+		var rese=$(this)[0].reset();
+		rese;
 		$("#q_modal").modal("hide");
 		$.ajax({
 			async:true,
@@ -80,11 +83,9 @@ $(document).ready( function(){
 			processData:false,
 			contentType:false,
 			success:function(data){
-				//$(".op")[0].reset();
-				//$("#em_mod").modal("hide");
-				$("#Msg_modal").modal("show");
-				$("#Msg_modal").children(".modal-body").empty().html(data);
-				//alert("sucess");
+				//rst.parents(".modal-body").empty().html(data);
+				$("#em_mod").modal('toggle');
+				alert(data);
 				
 			}
 			
@@ -97,7 +98,7 @@ $(document).ready( function(){
 		e.preventDefault();
 		e.stopImmediatePropagation();
 		var id=$(this).attr("id");
-		var cla=$(this).parents(".post_div");
+		var cla=$(this).parents(".cmt_div");
 			$.ajax({
 			async:true,
 			type:"GET",

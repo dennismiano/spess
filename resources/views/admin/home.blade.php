@@ -20,6 +20,20 @@
                         
                         <div class="col-md-10 col-xs-10">   
                             <div class="admin_content">
+                                    <div class="row">
+                                        <div class="message-holder">
+                                                    <img class="no-message-icon"  src = "{{ URL::asset('/images/empty-orders.png')}}" alt = "logo">
+
+                                                        <div class="no-message-msg">
+                                                            <h1 class=""> No quotes requested!</h1>
+                                                            <p>Seems like no one has requested for a quote yet.</p>
+                                                        </div>
+                                                    <div class="how-it-works">
+                                                            <h3>How it Works</h3>
+                                                            <p>The orders section receives quotation requests from clients who have already shown willingness to purchase a certain service.</p>
+                                                    </div>
+                                        </div>
+                                    </div>
                             </div>
                         </div>
             </div>

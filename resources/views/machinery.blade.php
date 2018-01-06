@@ -17,15 +17,15 @@
                               <div class="row">
                                   <div class="images-holder">
                                         <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/machinery1.jpg')}}" alt = "service-icon">
                                         </div>
 
                                         <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/machinery2.jpg')}}" alt = "service-icon">
                                         </div>
 
                                         <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/machinery3.jpg')}}" alt = "service-icon">
                                         </div>
                                   </div>
                                 </div>
