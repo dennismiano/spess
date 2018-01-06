@@ -1,7 +1,8 @@
 
-@if( isset($orders) && $orders->isNotEmpty())
+@if( isset($orders) && $orders->isNotEmpty() && isset($numbers)  )
 
-	<div class="row">
+	<div class="row order_up">
+	    Total Enquiries:{{$numbers}}
 		@foreach( $orders as $value )
 
 			<div class="col-md-6">

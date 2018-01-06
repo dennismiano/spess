@@ -13,7 +13,12 @@ $(document).ready( function(){
 				
 			},
 			complete: function(){
-				$('#myModal').modal('hide');
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
 				
 			}
 	});
@@ -58,6 +63,7 @@ $(document).ready( function(){
 	$("body").on("click",".del_msg",  function(e) {
 		e.preventDefault();
 		e.stopImmediatePropagation();
+		var hiik=$(this);
 		 $(this).each( function(){
 			 //alert("data");
 			 var mid=$(this).attr("id");
@@ -66,8 +72,8 @@ $(document).ready( function(){
 				type:"GET",
 				url:"/del/message/"+mid,
 				success:function(data){
-					$('#Msg_modal').modal('show');
-					$('.modal-body').empty().html(data);
+					
+				 hiik.parents(".msg_div").empty().html(data);
 					
 					
 				}
@@ -80,15 +86,14 @@ $(document).ready( function(){
 		e.preventDefault();
 		e.stopImmediatePropagation();
 		var di=$(this).attr("id");
+		var hiik=$(this);
 		  	$.ajax({
 				async:true,
 				type:"GET",
 				url:"/del/order/"+di,
 				success:function(data){
-					//cla.empty().html(data);
-					//alert(data);
-					$('#Msg_modal').modal('show');
-					$('.modal-body').empty().html(data);
+				
+				    hiik.parents(".order_up").empty().html(data);
 					
 				}
 				
@@ -211,7 +216,7 @@ $(document).ready( function(){
 					 alert(data);
 				 },
 				success:function(data){
-					hii.parents(".one_up").append(data);
+					hii.parents(".one_div").append(data);
 					//alert(data);
 					
 				}

@@ -50,7 +50,8 @@ class msg extends Controller
 	//view msg
 	public function view_msg(  message $message ){
 		$msgs=$message::orderBy('created_at','desc')->SimplePaginate(5);
-		return view("msg.view",["msg"=>$msgs]);
+		$ccc=$message::all()->count();
+		return view("msg.view",["msg"=>$msgs,"count"=>$ccc]);
 		
 		
 	}
@@ -58,7 +59,8 @@ class msg extends Controller
 	public function delete_msg(message $message, int $id){
 		$msgss=$message::destroy($id);
 		if($msgss){
-			return "Message deleted successfully";
+			//return "Message deleted successfully";
+			 return redirect()->action("msg@view_msg");
 			
 		}
 		else{

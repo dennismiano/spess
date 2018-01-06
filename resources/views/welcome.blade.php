@@ -375,7 +375,7 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM4nUO7TbbgthUAw__ApRCsWY57cqv6Ls&callback=initMap">
         </script>
 		<!--  Loading Modal -->
-<div id="em_mod" class="modal fade" role="dialog" data-backdrop="static">
+<div id="empty_mod" class="modal fade" role="dialog" data-backdrop="static">
   <div class="modal-dialog">
 
     <!-- Modal content-->
