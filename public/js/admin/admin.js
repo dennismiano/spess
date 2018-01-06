@@ -4,7 +4,7 @@ $(document).ready( function(){
 					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
 					},
 			beforeSend: function(){
-				//ad  spinner
+				//add  spinner
 				$("#myModal").modal('show');
 				var spinner=" <div class='loader'></div> ";
 				$('.modal-content').empty().html(spinner);
@@ -37,9 +37,8 @@ $(document).ready( function(){
 	$("body").on("click",".load_ajax",function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
-		$(this).each(function(){
-			   var ur=$(this).attr("href");
-			var cla=$("."+$(this).attr("cl") );
+	    var ur=$(this).attr("href");
+		var cla=$("."+$(this).attr("cl") );
 		$.ajax({
 			async:true,
 			type:"GET",
@@ -52,7 +51,6 @@ $(document).ready( function(){
 			
 			
 		   });
-		}   );
 		
 	}   );
 	
@@ -114,14 +112,8 @@ $(document).ready( function(){
 					 alert(data);
 				 },
 				success:function(data){
-					//cla.empty().html(data);
-					//alert(data);
-					if(data){
-						$(".admin_content").empty().html("sucess");
-					}
-					else{
-						alert("emp");
-					}
+					//alert("success");
+					$(".admin_content").empty().html(data);
 					
 				}
 				
@@ -173,8 +165,8 @@ $(document).ready( function(){
 					 alert(data);
 				 },
 				success:function(data){
-					//$(".admin_content").empty().html(data);
-					alert(data);
+					$(".admin_content").empty().html(data);
+					//alert(data);
 					
 				}
 				
@@ -276,6 +268,29 @@ $(document).ready( function(){
 			   });
 		
 	} );
+	//view post
+	$("body").on("click",".view_post",  function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		 var id=$(this).attr("id");
+		$.ajax({
+		async:true,
+		type:"GET",
+		url:"/one/post/"+id,
+		error:function(data){
+			 alert(data);
+		 },
+		success:function(data){
+			$(".one_post").empty().html(data);
+			//alert(data);
+			
+		}
+		
+		
+	   });
+		
+	} );
+	
 	
 	
 	

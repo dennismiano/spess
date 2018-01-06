@@ -11,10 +11,11 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use App\post;
 
-class postCreated
+class postCreated implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     public $post;
+	//public $broadcastQueue="";
     /**
      * Create a new event instance.
      *
@@ -34,6 +35,12 @@ class postCreated
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return ["newPost"];
     }
+	
+	public function broadcastWith()
+	{
+		return ["post"=>$this->post ];
+	}
+	
 }

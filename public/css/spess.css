@@ -532,6 +532,16 @@
 	margin-top: 20px;
 	margin-left: -15px;
 	margin-right: -15px;
+	margin-bottom: 30px;
+}
+.blog-list-image{
+	width:100%;
+	height:80px;
+	overflow: hidden;
+}
+.blogger-image-thumbnail{
+	height: 100%;
+	width: 100%;
 }
 .moreblogs{
 	font-family: 'Signika', sans-serif;
@@ -540,7 +550,18 @@
 	border-bottom:2px solid #ccc;
 }
 .blog-thumbnail{
-	
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+.one-view{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+@media only screen and (min-width : 768px) {
+	.blog-image{
+		height:500px;
+	}
 }
 /********************************************************ADMIN STYLING************************/
 .admin-header{
@@ -710,10 +731,24 @@
 	margin-right: -15px;
 	margin-left: -15px;
 }
+.blog-thumbnail-text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 .blogger-image{
 	width:100%;
 }
-
+.blog-thumbnail-title{
+	margin:0;
+}
+.blog-byline{
+	font-size: 10pt;
+	margin:0;
+	
+}
+.blog-thumbnail-links{
+	font-size: 10pt;
+}
 @media only screen and (min-width : 768px) {
 		.post_div{
 			margin-right: 0;

@@ -40,6 +40,8 @@ Route::get('/del/order/{id}', 'order@del_order');
 Route::post('/new/post', 'blog@create_post');
 //view post
 Route::get('/view/post', 'blog@view_post');
+//Admin view one post
+Route::get('/one/post/{id}', 'blog@one_post');
 //del post
 Route::get('/del/post/{id}', 'blog@del_post');
 
@@ -66,6 +68,8 @@ Route::get('/user/blog', 'blog@u_view');
 Route::get('/user/cmt/{id}', 'blog@user_cmt');
 //user create cmt
 Route::post('/new/user/cmt', 'blog@user_create_cmt');
+//user view one blog
+Route::get('/user/view/blog/{id}', 'blog@user_view_blog');
 
 
 
