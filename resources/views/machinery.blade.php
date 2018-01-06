@@ -2,7 +2,7 @@
             <div class="row">
                     <div class="machinery-header">
                             <div class="container">
-                                    <h1>Plant & Machinery<br>Rentals</h1>
+                                    <h1> SPESS Plant & <br> Machinery<br>Rentals</h1>
                             </div>
                     </div>
             </div>
@@ -11,21 +11,23 @@
                     <div class="pages-content">
                         <div class="container">
                             <div class="col-md-8">
-                              <h1>Plant & Machinery Rentals</h1>
+                              <h1 class="pages-headerh1">Plant & Machinery Rentals</h1>
                               <p>Renting an equipment is a sure convinient way to start on a project fast and free up some cash for other essentials in the project. Thats where we step in to provide you with specialized plant equipment, construction equipment, motor vehicles while being mindful of the value you are getting from the rented equipment. We structure our renting models to give the client least pressure and remaining transparent about the roles and obligations of each party during the tenure</p>
 
                               <div class="row">
+                                  <div class="images-holder">
                                         <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/machinery1.jpg')}}" alt = "service-icon">
                                         </div>
 
                                         <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/machinery2.jpg')}}" alt = "service-icon">
                                         </div>
 
                                         <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/machinery3.jpg')}}" alt = "service-icon">
                                         </div>
+                                  </div>
                                 </div>
                             </div>
 

@@ -45,7 +45,6 @@
 	font-family: 'Signika', sans-serif;
 	font-size: 13pt;
 	border-bottom:1px solid #ebebeb;
-
 }
 .menu li a{
 	color:#00acef;
@@ -85,36 +84,50 @@
 }
 .spess-heroslider h2{
 	font-family: 'Signika', sans-serif;
-	color:#cccccc;
+	color:#666;
 	font-weight: 600;
-	padding-top: 100px;
+	font-size: 15pt;
 }
 .spess-heroslider h1{
 	font-family: 'Montserrat', sans-serif;
-	font-size:25pt;
+	font-size:20pt;
+	margin-bottom: 30px;
+}
+.spess-slider-text{
+	background-color: #fff;
+	opacity: 0.8;
+	padding:20px;
+	margin-top: 100px;
+	margin-right: -15px;
+	margin-left: -15px;
+
 }
 .spess-cta{
 	padding:7px 40px;
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: #00acef;
 	border:1px solid #ebebeb;
 	font-family: 'Signika', sans-serif;
 	font-size: 14pt;
-	color:#00acef;
+	color:#fff;
 
 }
-.@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 768px) {
+	.spess-slider-text{
+		margin-top: 120px;
+		background-color: transparent;
+	}
 	.spess-heroslider h2{
-		padding-top: 200px;
+		font-size: 20pt;
 	}
 	.spess-heroslider h1{
-		font-size:40pt;
+		font-size:30pt;
 	}
 }
 /*****************************************************SPESS SERVICES*****************************************/
 .services{
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }
 .services h1{
 	text-align: center;
@@ -144,9 +157,16 @@
 	height: auto;
 }
 
+@media only screen and (min-width : 768px) {
+	.services{
+		padding-top: 50px;
+		padding-bottom: 80px;
+	}
+}
+/************************************************ABOUTUS STYLING**************************/
 .about-us{
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	/*background-color: #ebebeb;*/
 	background-image: url("/images/dottedbg.png");
 	background-repeat: repeat;
@@ -172,7 +192,9 @@
 .about-us-text{
 	font-family: 'Signika', sans-serif;
 	font-weight: 100;
-	font-size: 20pt;
+	font-size: 15pt;
+	padding-right: 0px;
+	margin-bottom: 40px;
 }
 .aboutus-wrapper{
 	padding-right:30px;
@@ -181,6 +203,8 @@
 	background-color: #fff;
 	padding: 5px 20px;
 	margin-bottom: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .service-iconsbg{
@@ -192,9 +216,7 @@
 	margin-right: 15px;
 	float: left;
 	border-radius: 5px;
-
 }
-
 .service-icons{
 	width:100%;
 	height: auto;
@@ -203,14 +225,35 @@
 	clear:left;
 	padding-top: 15px;
 }
+.service-thumbnail{
+	width:100%;
+	height:200px;
+	margin-bottom: 15px;
+}
+@media only screen and (min-width : 768px) {
+	.about-us{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.about-us-text{
+		font-size: 20pt;
+		padding-right:20px;
+	}
+	.services-wrapper{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+/*********************************************STYLING CLIENT TESTIMONY*****************************/
 .client-testimony{
-	padding-top: 100px;
-	padding-bottom:100px;
+	padding-top: 20px;
+	padding-bottom:30px;
 }
 .client-testimony h1{
 	text-align: center;
 	font-family: 'Signika', sans-serif;
 	font-weight: 600;
+	font-size: 20pt;
 }
 .testimony{
 	background-color: #ebebeb;
@@ -228,22 +271,34 @@
 	display: block;
 	padding-top: 15px;
 }
+
+@media only screen and (min-width : 768px) {
+	.client-testimony{
+		padding-top: 50px;
+		padding-bottom:50px;
+	}
+}
+/********************************************STYLING FOOTER***************************/
 .footer{
 	background-image: url("/images/dottedbg.png");
 	background-repeat: repeat;
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .footermap-header{
 	border-top: 1px solid #ebebeb;
 	background-color: #fff;
-	padding:5px 10px 2px 10px;
+	padding:5px 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	border-top:1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right:1px solid #ccc;
 }
 .footer h1{
 	font-family: 'Signika', sans-serif;
 	font-weight:600;
+	font-size: 20pt;
 }
 .footer h4{
 	font-family: 'Signika', sans-serif;
@@ -262,10 +317,12 @@
 	width: 100%;
 	height: 300px;
 	padding-top: 20px;
+	border-right:1px solid #ccc;
+	border-left: 1px solid #ccc;
 }
 .contacts-wrapper{
-	padding-top:15px;
-	padding-left: 10px;
+	padding-top:5px;
+	padding-left:50px;
 }
 .address-details{
 	background-color: #ebebeb;
@@ -274,6 +331,13 @@
 	border-top:10px solid #00acef;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border-bottom: 2px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+.address-details h4{
+	font-size: 15pt;
 }
 .business-address{
 	padding-left: 50px;
@@ -287,17 +351,29 @@
 	text-align:center;
 	color:#fff;
 }
+@media only screen and (min-width : 768px) {
+	.footer{
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.address-details h4{
+		font-size: 17pt;
+	}
+}
 /***********************************PAGES STYLING********************************/
 .pages-header{
 	background-image: url("/images/header-logistics.jpg");
-	height:300px;
-	padding-top: 100px;
+	height:200px;
+	padding-top: 30px;
 }
 .pages-header h1{
 	font-family: 'Signika', sans-serif;
 	color:#fff;
 	font-weight: 600;
 	padding-top: 20px;
+	font-size: 25pt;
+
 }
 .pages-content{
 	padding-top: 50px;
@@ -313,12 +389,22 @@
 	font-weight:300;
 	font-size: 13pt;
 }
+.pages-headerh1{
+	font-family: 'Signika', sans-serif;
+	font-size: 15pt;
+}
+.images-holder{
+	margin-bottom: 50px;
+}
 .form-header{
 	background-color: #dddddd;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	border-bottom:4px solid #58D3F7;
 	padding:10px 10px 5px 10px;
+	border-left: 1px solid #ccc;
+	border-top:1px solid #ccc;
+	border-left: 1px solid #ccc;
 }
 .form-title{
 	padding-top: 10px;
@@ -328,18 +414,33 @@
 	background-color: #f2f2f2;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	padding:10px 10px 20px 10px;
-	margin-bottom: 20px;
+	padding:10px 10px 10px 10px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #ccc;
+	border-right:1px solid #ccc;
+	border-left: 1px solid #ccc;
 }
-.service-thumbnail{
-	width:100%;
-	height:auto;
+/**********************************STYLING QUOTE MODAL**********************/
+.modal-header{
+	background-color: #dddddd;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom:4px solid #58D3F7;
+	padding:10px 10px 5px 10px;
+	border-left: 1px solid #ccc;
+	border-top:1px solid #ccc;
+	border-left: 1px solid #ccc;
 }
+.modal-title{
+	font-family: 'Signika', sans-serif;
+}
+
+
 /***********************************MACHINERY RENTALS*********************************/
 .machinery-header{
 	background-image: url("/images/header-machinery.jpg");
-	height:300px;
-	padding-top: 100px;
+	height:200px;
+	padding-top: 30px;
 }
 
 .machinery-header h1{
@@ -347,21 +448,47 @@
 	color:#fff;
 	font-weight: 600;
 	padding-top: 20px;
+	font-size: 25pt;
 }
 
 /***********************************PPE*********************************/
 .ppe-header{
 	background-image: url("/images/header-ppe.jpg");
-	height:300px;
-	padding-top: 100px;
+	height:200px;
+	padding-bottom: 30px;
 }
 .ppe-header h1{
 	font-family: 'Signika', sans-serif;
 	color:#fff;
 	font-weight: 600;
 	padding-top: 20px;
+	font-size: 25pt;
 }
 
+/*****************************ADAPTING PAGES FOR MEDIUM VIEW************************************/
+@media only screen and (min-width : 768px) {
+	.ppe-header{
+		height:300px;
+		padding-top: 40px;
+	}
+	.ppe-header h1{
+		font-family: 'Signika', sans-serif;
+	}
+
+	.machinery-header{
+		height:300px;
+		padding-top: 40px;
+	}
+	.pages-headerh1{
+		font-family: 'Signika', sans-serif;
+		font-size: 20pt;
+	}
+	.pages-header{
+		height:300px;
+		padding-top: 40px;
+	}
+
+}
 /*******************************************************STYLING BLOG FRONT END******************/
 .most-recent-h1{
 	font-family: 'Signika', sans-serif;
@@ -372,8 +499,19 @@
 .recent-blog-wrapper{
 
 }
+.blog-wrapper{
+	padding-left: 10px;
+	padding-right: 10px;
+}
 .recent-blog-wrapper h2{
 	font-family: 'Signika', sans-serif;	
+}
+.recent-blog-body{
+	padding-bottom: 30px;
+}
+.recent-blog-body p{
+	font-family: 'Signika', sans-serif;
+	font-weight: 300;
 }
 .blog-image{
 	width:100%;
@@ -386,7 +524,8 @@
 }
 .blog-title{
 	margin:0;
-	padding-bottom: 10px
+	padding-bottom: 10px;
+	font-family: 'Signika', sans-serif;
 }
 .byline{
 	margin:0;
@@ -396,6 +535,18 @@
 	background-color: #ebebeb;
 	padding: 10px 10px;
 	margin-top: 20px;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: 30px;
+}
+.blog-list-image{
+	width:100%;
+	height:80px;
+	overflow: hidden;
+}
+.blogger-image-thumbnail{
+	height: 100%;
+	width: 100%;
 }
 .moreblogs{
 	font-family: 'Signika', sans-serif;
@@ -404,7 +555,18 @@
 	border-bottom:2px solid #ccc;
 }
 .blog-thumbnail{
-	
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+.one-view{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+@media only screen and (min-width : 768px) {
+	.blog-image{
+		height:500px;
+	}
 }
 /********************************************************ADMIN STYLING************************/
 .admin-header{
@@ -533,10 +695,14 @@
 }
 }
 /*****************************************STYLING BLOG SECTION*******************************/
+.blog-section{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
 .blogform-section{
+	padding: 10px;
 	margin-left: -30px;
 	margin-right: -30px;
-	background-color: #ebebeb;
 }
 .blogform-section h3{
 	font-family: 'Signika', sans-serif;
@@ -552,6 +718,8 @@
 .recent-blogs{
 	background-color: #ebebeb;
 	padding: 10px 20px;
+	margin-right: -15px;
+	margin-left: -15px;
 }
 .recent-blogs h4{
 	margin:0;
@@ -561,20 +729,38 @@
 	font-family: 'Signika', sans-serif;
 	padding-bottom: 5px;
 }
-.post_div{
+.more-blogs{
 	background-color: #fff;
 	padding: 10px 10px;
 	margin-top: 10px;
-	margin-right: -30px;
-	margin-left: -30px;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.blog-thumbnail-text{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .blogger-image{
 	width:100%;
 }
-
+.blog-thumbnail-title{
+	margin:0;
+}
+.blog-byline{
+	font-size: 10pt;
+	margin:0;
+	
+}
+.blog-thumbnail-links{
+	font-size: 10pt;
+}
 @media only screen and (min-width : 768px) {
 		.post_div{
 			margin-right: 0;
 			margin-left: 0;
+		}
+		.recent-blogs{
+				margin-right: 0px;
+				margin-left: 0px;
 		}
 }

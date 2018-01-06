@@ -1,7 +1,7 @@
        <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-alpha.2/classic/ckeditor.js"></script>
         
 
-	<div class="col-md-6">
+	<div class="col-md-7">
 		<div class="blogform-section">
 		{{-- view update div --}}
 				@if(isset($up_post)  )
@@ -102,17 +102,18 @@
 			</div>
 	</div>
 	@if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )	
-	<div class="col-md-6">
+	<div class="col-md-5">
 		<div class="recent-blogs">
 			<h3 class="recent-blogs-header">Recent Blogs</h3>
 				
 		               Total Posts:{{$cnt}}
 					   @foreach( $post as $value)
-							<div class="post_div">
+							<div class="post_div more-blogs">
 								<div class="row">
-									<div class="col-md-3">
-										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" />
-									</div>
+
+										<div class="col-md-3">
+											<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" />
+										</div>
 
 									<div class="col-md-9">
 										<h4>{{$value->title}}</h4>
