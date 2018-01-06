@@ -22,7 +22,8 @@
         <link href="{{ URL::asset('/css/spess.css')}}" rel="stylesheet">
         <link href="{{ URL::asset('/css/slick.css')}}" rel="stylesheet">
 		<link href="{{ URL::asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-		<style>
+		
+        <style>
 				.loader {
 				border: 5px solid #f3f3f3; /* Light grey */
 				border-top: 5px solid #3498db; /* Blue */
@@ -32,6 +33,7 @@
 				height: 60px;
 				animation: spin 2s linear infinite;
 				margin:auto;
+
 			}
 			.myModal,.myModal{
 				margin:auto;
@@ -90,11 +92,13 @@
                 <div class="spess-heroslider">
                     <div class="spess-heroslider1" style="background-image: url('/images/hero-image1.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
-                                <div class="col-md-5">
-                                    <h2>Logistics Services</h2>
-                                    <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
-                                     <h1><span class="red">SMALL AND LARGE TRUCKS FOR HIRE</span></h1>
-                                     <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote  <i class="fa fa-chevron-circle-right"></i></button>
+                                <div class="col-md-6">
+                                    <div class="spess-slider-text">
+                                        <h2>Logistics Services</h2>
+                                        <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
+                                         <h1><span class="red">SMALL AND LARGE TRUCKS FOR HIRE</span></h1>
+                                         <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote  <i class="fa fa-chevron-circle-right"></i></button>
+                                    </div>
                                 </div>
                         </div>
                     </div>
@@ -102,10 +106,12 @@
                     <div class="spess-heroslider2" style="background-image: url('/images/hero-image2.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                             <div class="col-md-6">
-                                <h2>Plant & Machinery</h2>
-                                <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
-                                <h1><span class="red">GRADERS, DOZERS, BACKHOES COMPACTORS FOR HIRE</span></h1>
-                                 <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                <div class="spess-slider-text">
+                                    <h2>Plant & Machinery</h2>
+                                    <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
+                                    <h1><span class="red">GRADERS, DOZERS, BACKHOES COMPACTORS FOR HIRE</span></h1>
+                                     <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -113,10 +119,12 @@
                     <div class="spess-heroslider3" style="background-image: url('/images/hero-image3.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                             <div class="col-md-6">
-                                <h2>Heavy Cargo Transportation</h2>
-                                <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
-                                <h1><span class="red">BARGING, WAREHOUSING<br>RAIL, AND ROAD SERVICES</span></h1>
-                                 <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                <div class="spess-slider-text">
+                                    <h2>Heavy Cargo Transportation</h2>
+                                    <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
+                                    <h1><span class="red">BARGING, WAREHOUSING<br>RAIL, AND ROAD SERVICES</span></h1>
+                                     <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -124,10 +132,12 @@
                     <div class="spess-heroslider4" style="background-image: url('/images/hero-image4.jpg');height:600px; background-position: center bottom;">
                         <div class="container">
                             <div class="col-md-6">
-                                <h2>Personal Protective Equipment</h2>
-                                <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
-                                <h1><span class="red">SUPPLIES TO GEOTHERMAL, CONSTRUCTION, OIL AND GAS INDUSTRY</span></h1>
-                                 <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                <div class="spess-slider-text">
+                                    <h2>Personal Protective Equipment</h2>
+                                    <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
+                                    <h1><span class="red">SUPPLIES TO GEOTHERMAL, CONSTRUCTION, OIL AND GAS INDUSTRY</span></h1>
+                                     <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -250,7 +260,7 @@
             <div class="row">
                 <div class="client-testimony">
                     <div class="container">
-                        <h1><span class="blue">What Our Clients Say About us:</span></h1>
+                        <h1 class="logistical-services">What Our Clients Say About us:</span></h1>
 
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1">
@@ -278,13 +288,13 @@
                                     <div class="address-details">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <h4><i class="fa fa-home"></i> Watermark businesspark,</h4>
+                                                <h4 class="spess-location"><i class="fa fa-home"></i> Watermark businesspark,</h4>
                                                 <p class="business-address">Bay court, Ndege road,<br>Off Langata road.<br>P.O Box 10298-00400 Nairobi, Kenya.</p>
                                             </div>
 
                                             <div class="col-md-6">
                                                 <div class="contacts-wrapper">
-                                                    <p><i class="fa fa-phone-square"></i><b> Cell:</b> +254 742 360 766<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 211 181<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 724 723 980<br><b><i class="fa fa-envelope"></i> Email:</b> info@spessltd.com</p>
+                                                    <p><i class="fa fa-phone-square"></i><b> Cell:</b> +254 742 360 766<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 211 181<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 724 723 980<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 190 456<br><b><i class="fa fa-envelope"></i> Email:</b> info@spessltd.com</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -298,7 +308,7 @@
                                     </div>
 
                                     <div class="form-body">
-                                        <p>If you have any question regarding any of our services, do not hesitate to ask, we will get back to you shortly.
+                                        <p>If you have any question regarding any of our services, do not hesitate to ask.
                                          <form class="msg_form">
                                          {{csrf_field()}}
                                           <div class="form-group">
@@ -395,6 +405,8 @@
 
   </div>
 </div>
+
+
 <!--    Quote modal -->
 <div id="q_modal" class="modal fade" role="dialog" data-backdrop="static">
   <div class="modal-dialog">
@@ -403,13 +415,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close " data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"></h4>
+        <h2 class="modal-title">Quote Request</h2>
       </div>
       <div class="modal-body">
 	      <form class="op">
 			 {{csrf_field()}}
 			  <div class="form-group">
-			   <select type="text" class="form-control" name="serv">
+			   <select type="text" class="form-control spess-text" name="serv">
 				 <option>Which service would you like us to quote for</option>
 				 <option>Heavy equipment transportion</option>
 				 <option>General & Specialized construction equipment</option>
@@ -419,15 +431,15 @@
 			  </div>
 			  
 			  <div class="form-group">
-				<input type="text" class="form-control"  placeholder="your name" name="name">
+				<input type="text" class="form-control spess-text"  placeholder="your name" name="name">
 			  </div>
 			  
 			  <div class="form-group">
-				<input type="email" class="form-control" placeholder="your email" name="em">
+				<input type="email" class="form-control spess-text" placeholder="your email" name="em">
 			  </div>
 
 			  <div class="form-group "  >
-				<input type="text" class="form-control"  placeholder="mobile number" name="ph">
+				<input type="text" class="form-control spess-text"  placeholder="mobile number" name="ph">
 			  </div>
 
 			  <button type="submit" class="spess-cta"><b class="">Get a Quote</b> <i class="fa fa-paper-plane"></i></button>

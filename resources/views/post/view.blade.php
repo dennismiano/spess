@@ -80,21 +80,22 @@
 				@if( isset($post)  && $post->isNotEmpty()   )	
 		               Total Posts:{{$post->count()}}
 					   @foreach( $post as $value)
-							<div class="post_div">
+							<div class="post_div more-blogs">
 								<div class="row">
-									<div class="col-md-3">
-										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" />
-									</div>
 
-									<div class="col-md-9">
-										<h4>{{$value->title}}</h4>
-										<p>Posted {{$value->created_at->diffForHumans()}} by {{$value->name}}</p>
-										
-										<a href="#" class="view_cmt" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$value->comments()->count()}})</span></a>&nbsp;&nbsp;
-										<a href="#" class="edit_post" id="{{$value->id}}"><span class="blue"><i class="fa fa-pencil-square-o"></i> update</span></a>&nbsp;&nbsp;
-										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> delete</span></a>&nbsp;&nbsp;
-										<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> view</span></a>
-									</div>
+										<div class="col-md-3">
+											<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $value->files); ?>" />
+										</div>
+
+										<div class="col-md-9">
+											<h4>{{$value->title}}</h4>
+											<p>Posted {{$value->created_at->diffForHumans()}} by {{$value->name}}</p>
+											
+											<a href="#" class="view_cmt" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$value->comments()->count()}})</span></a>&nbsp;&nbsp;
+											<a href="#" class="edit_post" id="{{$value->id}}"><span class="blue"><i class="fa fa-pencil-square-o"></i> update</span></a>&nbsp;&nbsp;
+											<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> delete</span></a>&nbsp;&nbsp;
+											<a href="#" class="del_post" id="{{$value->id}}"><span class="red"><i class="fa fa-trash"></i> view</span></a>
+										</div>
 								</div>
 							</div>
 					   @endforeach

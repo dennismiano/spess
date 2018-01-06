@@ -1,7 +1,7 @@
 <div class="row">
                     <div class="ppe-header">
                             <div class="container">
-                                    <h1>Personal Protective<br>Equipment</h1>
+                                    <h1>SPESS Personal <br>Protective<br>Equipment</h1>
                             </div>
                     </div>
             </div>
@@ -10,21 +10,23 @@
                         <div class="pages-content">
                             <div class="container">
                                 <div class="col-md-8">
-                                  <h1>Personal Protective Equipment</h1>
+                                  <h1 class="pages-headerh1">Personal Protective Equipment</h1>
                                   <p>The market is awash with personal protective equipment that are substandard and unsafe, ironically because they were supposed to provide safety in the first place. Having been a supplier in the construction industry and other industries that often need the use of protective gear, we have assessed the safety and protection needs for workers and made a selection of items that are best suited and fit recomended standards</p>
 
                                   <div class="row">
-                                        <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
-                                        </div>
+                                      <div class="images-holder">
+                                          <div class="col-md-4">
+                                              <img class="service-thumbnail"  src = "{{ URL::asset('/images/gallery-images/truck1.jpg')}}" alt = "service-icon">
+                                          </div>
 
-                                        <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
-                                        </div>
+                                          <div class="col-md-4">
+                                              <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                          </div>
 
-                                        <div class="col-md-4">
-                                            <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
-                                        </div>
+                                          <div class="col-md-4">
+                                              <img class="service-thumbnail"  src = "{{ URL::asset('/images/gray.jpg')}}" alt = "service-icon">
+                                          </div>
+                                      </div>
                                   </div>
 
                                 </div>
