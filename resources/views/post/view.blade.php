@@ -61,7 +61,7 @@
 
 					@endif	
 
-				    @if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )
+				    @if( ! isset($one) &&  ! isset($up_post)  )
 					
 					<div  class="one_post">
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Create a new article</span></h3>

@@ -49,6 +49,7 @@ $(document).ready( function(){
 			type:"GET",
 			url:ur,
 			success:function(data){
+				
 				cla.empty().html(data);
 				//alert("sucess");
 				
