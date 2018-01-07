@@ -2,7 +2,13 @@
 				@if( isset($msg) && $msg->isNotEmpty($msg)  && isset($count)  )
 					
 			<div class="row msg_div">
-				 Total Messages:{{$count}}
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="message-count">
+							<h4>Total Messages:{{$count}}</h4>
+						</div>
+					</div>
+				</div>
 					@foreach( $msg as $value )
 				<div class="col-md-6">
 					<div class="admin-messages">

@@ -2,9 +2,15 @@
 @if( isset($orders) && $orders->isNotEmpty() && isset($numbers)  )
 
 	<div class="row order_up">
-	    Total Enquiries:{{$numbers}}
+		<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<div class="message-count">
+						    <h4>Total Enquiries:{{$numbers}}</h4>
 		@foreach( $orders as $value )
-
+						</div>
+					</div>
+				</div>
+				
 			<div class="col-md-6">
 					<div class="admin-messages">
 						<h3><i class="fa fa-user-circle"></i> {{$value->name}}</h3>

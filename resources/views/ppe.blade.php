@@ -33,40 +33,39 @@
 
                         <div class="col-md-4">
                             <div class="form">
-                                <div class="row">
+
                                     <div class="form-header">
                                         <h1>Talk to Us</h1>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="footer-form-container">
-                                    <div class="form-header">
-                                        <h4 class="form-title">Still Have a Question?</h4>
                                     </div>
 
                                     <div class="form-body">
                                         <p>If you have any question regarding any of our services, do not hesitate to ask.
-                                         <form class="msg_form">
-                                         {{csrf_field()}}
-                                          <div class="form-group">
-                                            <input type="text" class="form-control no-border form-text" id="project-category" placeholder="Your Name?" name="name">
-                                          </div>
-                                          
-                                          <div class="form-group">
-                                            <input type="text" class="form-control no-border form-text"  placeholder="Phone number?" name="phone">
-                                          </div>
-                                          
-                                          <div class="form-group">
-                                            <input type="email" class="form-control no-border form-text"  placeholder="Email?" name="email">
-                                          </div>
+                                         <form class="op">
+                                             {{csrf_field()}}
+                                              <div class="form-group">
+                                               <select type="text" class="form-control spess-text" name="serv">
+                                               <option>Which service would you like us to quote for</option>
+                                               <option>Heavy equipment transportion</option>
+                                               <option>General & Specialized construction equipment</option>
+                                               <option>Supply of Protective Equipment</option>
+                                               <option>General Logistics Support</option>
+                                               </select>
+                                              </div>
+                                              
+                                              <div class="form-group">
+                                              <input type="text" class="form-control spess-text"  placeholder="your name" name="name">
+                                              </div>
+                                              
+                                              <div class="form-group">
+                                              <input type="email" class="form-control spess-text" placeholder="your email" name="em">
+                                              </div>
 
-                                          <div class="form-group proj_update">
-                                            <textarea class="form-control form-text" rows="4" placeholder="Your Message" name="msg"></textarea>
-                                          </div>
+                                              <div class="form-group "  >
+                                              <input type="text" class="form-control spess-text"  placeholder="mobile number" name="ph">
+                                              </div>
 
-                                          <button type="submit" class="spess-cta">Ask Question <i class="fa fa-paper-plane"></i></button>
-                                        </form>
+                                              <button type="submit" class="spess-cta"><b class="">Get a Quote</b> <i class="fa fa-paper-plane"></i></button>
+                                          </form> 
                                     </div>
                                 </div>
                                 </div>
