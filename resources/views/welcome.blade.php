@@ -379,7 +379,7 @@
   <div class="modal-dialog">
 
     <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content load_modal">
       
     </div>
 

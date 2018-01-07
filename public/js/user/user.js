@@ -5,10 +5,10 @@ $(document).ready( function(){
 					},
 			beforeSend:function(){
 				$("#empty_mod").modal("show");
-				$('.modal-content').empty().html(" <div class='loader'></div> ");
+				$('.load_modal').empty().html(" <div class='loader'></div> ");
 			},
 		   complete:function(){
-				$("#empty_mod").modal("hide");
+				 $("#empty_mod").modal("hide");
 				
 			},
 			error:function(data){
@@ -27,6 +27,7 @@ $(document).ready( function(){
 			type:"GET",
 			url:ur,
 			success:function(data){
+				
 				cla.empty().html(data);
 				//alert("sucess");
 				
@@ -51,9 +52,10 @@ $(document).ready( function(){
 			processData:false,
 			contentType:false,
 			success:function(data){
-			  $("#Msg_modal").modal("show");
-				
-				
+			    hii[0].reset();
+				//alert(data);
+				$("#Msg_modal").modal("show");
+				$('.modal-body').empty().html(data);
 				
 			}
 			
@@ -79,9 +81,11 @@ $(document).ready( function(){
 			processData:false,
 			contentType:false,
 			success:function(data){
-				//rst.parents(".modal-body").empty().html(data);
+				rst[0].reset();
 				//$("#em_mod").modal('toggle');
-				alert(data);
+				//alert(data);
+				$("#Msg_modal").modal("show");
+				$('.modal-body').empty().html(data);
 				
 			}
 			
