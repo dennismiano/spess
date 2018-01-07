@@ -49,7 +49,7 @@ $(document).ready( function(){
 			type:"GET",
 			url:ur,
 			success:function(data){
-				
+				//$("#myModal").modal('hide');
 				cla.empty().html(data);
 				//alert("sucess");
 				
