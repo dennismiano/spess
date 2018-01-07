@@ -32,7 +32,7 @@ class login extends Controller
 			$det=["email"=>$request->email,"password"=>$request->pass];
 			$aa=Auth::attempt($det);
 			if($aa){
-				//return redirect()->route("/admin");
+				//return redirect()->route("admin");
 			}
 			else{
 				return "Error.Invalid Email or Password.";
@@ -41,6 +41,17 @@ class login extends Controller
 		}
 		else{
 			return abort(404);
+		}
+		
+	}
+	//log out admin 
+	public function log_out(Request $request){
+		$lo=Auth::logout();
+		if($lo){
+			
+		}
+		else{
+			return "Error.Failed to logout.";
 		}
 		
 	}

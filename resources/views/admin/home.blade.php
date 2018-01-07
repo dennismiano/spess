@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="admin-header">
                         <a class="load_ajax" href="/" cl="services"> <img class="spess-admin-logo"  src = "{{ URL::asset('/images/spessadmin.png')}}" alt = "logo"></a>
-                        <button class="logout-btn pull-right">Logout  <i class="fa fa-chevron-circle-right"></i></button>
+                        <button class="logout-btn pull-right admin_logout">Logout  <i class="fa fa-chevron-circle-right"></i></button>
                 </div>
             </div>
             

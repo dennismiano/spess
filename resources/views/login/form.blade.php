@@ -2,7 +2,8 @@
 <html>
 	<head>
 	<script src="{{ URL::asset('/js/jquery-3.2.1.min.js')}}"></script>
-     <script src="/js/login/login.js"></script>
+     <script src="{{ URL::asset('/js/login/login.js')}}"></script>
+	 <title>Admin</title>
 
 	</head>
 
@@ -11,7 +12,7 @@
 			<div>
 			
 			   <form class="login_form">
-			   
+			   {{csrf_field()}}
 				  <input type="email"  placeholder="Enter Email" name="email" />
 				  <input type="password"  placeholder="Enter Password"  name="pass"/>
 			   

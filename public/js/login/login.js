@@ -1,8 +1,13 @@
 
 $(document).ready( function(){
+	$.ajaxSetup({
+			headers:{
+					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
+					}
+	});
   
 	$("body").on("submit",".login_form",function(e){
-		e.preventDefault();
+	    e.preventDefault();
 		e.stopImmediatePropagation();
 		var da=new FormData(this);
 	    $.ajax({
@@ -16,8 +21,8 @@ $(document).ready( function(){
 					$("body").empty().html(data.message);
 				 },
 				success:function(data){
-					alert("success");
-					//window.location.replace("/admin");
+					//alert("success");
+					window.location.replace("/admin");
 					
 				}
 				

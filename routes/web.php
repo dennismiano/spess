@@ -97,11 +97,14 @@ Route::get("/add/{email}/{password}/{name}","login@add_admin");
 Route::get("/login","login@login_form");
 //log in admin
 Route::post("/admin/login","login@login_admin");
+//log out admin
+Route::get("/admin/logout","login@log_out");
+
 
 
 Route::get('/admin', function(){
 	return view("admin.welcome");
-});
+})->name("admin");
 //admin homepage
 Route::get('/admin/home', function(){
 	return view("admin.home");
