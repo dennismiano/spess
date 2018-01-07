@@ -3,7 +3,22 @@ $(document).ready( function(){
 	$.ajaxSetup({
 			headers:{
 					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
-					}
+					},
+					
+		   beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal("show");
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				$('#myModal').modal("hide");
+				
+				
+			}
 	});
   
 	$("body").on("submit",".login_form",function(e){
