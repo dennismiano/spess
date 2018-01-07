@@ -28,16 +28,6 @@
                                                             <h1 class="">Welcome Admin,</h1>
                                                             <p>View, Edit, Update & Delete information with ease.</p>
                                                         </div>
-                                                    <div class="how-it-works">
-                                                            <h3>How it Works</h3>
-
-                                                            <div class="col-md-2">
-                                                            </div>
-
-                                                            <div class="col-xs-10">
-                                                                <p>The orders section receives quotation requests from clients who have already shown willingness to purchase a certain service.</p>
-                                                            </div>
-                                                    </div>
                                         </div>
                                     </div>
                             </div>
