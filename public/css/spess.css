@@ -675,7 +675,13 @@
 	font-family: 'Signika', sans-serif;
 	color:#b5b5b5;
 }
-
+.message-count{
+	background-color: #ebebeb;
+	padding:10px 40px;
+}
+.message-count h4{
+	text-align:center;
+}
 .admin-messages{
 	background-color: #ebebeb;
 	padding: 20px 20px;
