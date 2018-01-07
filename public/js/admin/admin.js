@@ -28,6 +28,7 @@ $(document).ready( function(){
 			type:"GET",
 			url:"/admin/home",
 			success:function(data){
+				$("#myModal").modal('hide');
 				$(".magic").empty().html(data);
 				//$("#myModal").modal('hide');
 				//alert("sucess");
