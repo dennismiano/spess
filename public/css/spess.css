@@ -775,3 +775,25 @@
 				margin-left: 0px;
 		}
 }
+
+/**************************************************STYLING LOGIN PAGES*******************************/
+.login-form-body{
+	background-color: #ebebeb;
+	padding: 20px 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.login-form-header{
+	background-color: #00acef;
+	padding:5px 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.login-form-header h1{
+	font-family: 'Signika', sans-serif;
+	color:#fff;
+	font-size: 20pt;
+}
+.login-form{
+	margin-top: 100px;
+}
