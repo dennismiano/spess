@@ -294,6 +294,29 @@ $(document).ready( function(){
 	   });
 		
 	} );
+	//log out admin
+		$("body").on("click",".admin_logout",  function(e) {
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		$.ajax({
+		async:true,
+		type:"GET",
+		url:"/admin/logout",
+		error:function(data){
+			 alert(data);
+		 },
+		success:function(){
+			//$(".one_post").empty().html(data);
+			//alert(data);
+			window.location.replace("/");
+			
+		}
+		
+		
+	   });
+		
+	} );
+	
 	
 	
 	
