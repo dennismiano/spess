@@ -7,7 +7,7 @@ $(document).ready( function(){
 				//add  spinner
 				$("#myModal").modal('show');
 				var spinner=" <div class='loader'></div> ";
-				$('.modal-content').empty().html(spinner);
+				$('.load_modal').empty().html(spinner);
 				
 				
 				
@@ -36,7 +36,6 @@ $(document).ready( function(){
 			
 			
 		});
-		//alert("test");
 		
  //capture all links
 	$("body").on("click",".load_ajax",function(e){

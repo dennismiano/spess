@@ -75,6 +75,8 @@ Route::get('/user/view/blog/{id}', 'blog@user_view_blog');
 
 
 
+
+
  /*
 //reply form
 Route::get('/reply/form', '');
@@ -83,6 +85,16 @@ Route::post('/new/reply', '');
 //del reply
 Route::post('/del/reply', '');*/
 //Admin routes
+
+//generate a admin instance
+Route::get("/add","login@add_admin");
+
+//log in form
+Route::get("/login","login@login_form");
+//log in admin
+Route::get("/admin/login","login@login_admin");
+
+
 Route::get('/admin', function(){
 	return view("admin.welcome");
 });
