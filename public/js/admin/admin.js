@@ -3,7 +3,7 @@ $(document).ready( function(){
 			headers:{
 					'X-CSRF-TOKEN':$('meta[name="csrf-token"]').attr('content')
 					},
-			beforeSend: function(){
+			/*beforeSend: function(){
 				//add  spinner
 				$("#myModal").modal('show');
 				var spinner=" <div class='loader'></div> ";
@@ -20,15 +20,29 @@ $(document).ready( function(){
 					$(this).modal("hide");
 				});
 				
-			}
+			}*/
 	});
 	//load homepage
 	$.ajax({
 			async:true,
 			type:"GET",
 			url:"/admin/home",
+			beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').modal("hide");
+				
+			},
 			success:function(data){
-				$("#myModal").modal('hide');
+				//$("#myModal").modal('hide');
 				$(".magic").empty().html(data);
 				//$("#myModal").modal('hide');
 				//alert("sucess");
@@ -48,6 +62,24 @@ $(document).ready( function(){
 			async:true,
 			type:"GET",
 			url:ur,
+			beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 			success:function(data){
 				//$("#myModal").modal('hide');
 				cla.empty().html(data);
@@ -72,6 +104,24 @@ $(document).ready( function(){
 				async:true,
 				type:"GET",
 				url:"/del/message/"+mid,
+				beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					
 				 hiik.parents(".msg_div").empty().html(data);
@@ -92,7 +142,25 @@ $(document).ready( function(){
 				async:true,
 				type:"GET",
 				url:"/del/order/"+di,
-				success:function(data){
+				beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
+			success:function(data){
 				
 				    hiik.parents(".order_up").empty().html(data);
 					
@@ -117,6 +185,25 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
+				 
 				success:function(data){
 					//alert("success");
 					$(".admin_content").empty().html(data);
@@ -141,6 +228,24 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					$(".admin_content").empty().html(data);
 					//alert("set");
@@ -170,6 +275,24 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					$(".admin_content").empty().html(data);
 					//alert(data);
@@ -193,6 +316,24 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					$(".admin_content").empty().html(data);
 					//alert(data);
@@ -216,6 +357,24 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					hii.parents(".one_div").append(data);
 					//alert(data);
@@ -242,6 +401,24 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					hiig.parents(".cmt_div").empty().html(data);
 					
@@ -264,6 +441,24 @@ $(document).ready( function(){
 				error:function(data){
 					 alert(data);
 				 },
+				 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 				success:function(data){
 					hii.parents(".cmt_div").empty().html(data);
 					//alert(data);
@@ -286,6 +481,24 @@ $(document).ready( function(){
 		error:function(data){
 			 alert(data);
 		 },
+		 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 		success:function(data){
 			$(".one_post").empty().html(data);
 			//alert(data);
@@ -307,6 +520,24 @@ $(document).ready( function(){
 		error:function(data){
 			 alert(data);
 		 },
+		 beforeSend: function(){
+				//add  spinner
+				$("#myModal").modal('show');
+				var spinner=" <div class='loader'></div> ";
+				$('.load_modal').empty().html(spinner);
+				
+				
+				
+			},
+			complete: function(){
+				//$('#myModal').modal('hide');
+				$('#myModal').on('shown.bs.modal',
+					function () {
+					// do something…
+					$(this).modal("hide");
+				});
+				
+			},
 		success:function(){
 			//$(".one_post").empty().html(data);
 			//alert(data);

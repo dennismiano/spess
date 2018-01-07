@@ -44,7 +44,7 @@
 				{{--  End view update div --}}
 					
 				@if(isset($one)  )
-							
+							<div class="one_div">
 										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
 									
 
@@ -58,7 +58,7 @@
 										    Category:{{$one->category}}<br>
 										<a href="#" class="view_cmt" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$one->comments()->count()}})</span></a>
 							
-
+                            </div>
 					@endif	
 
 				    @if( ! isset($one) &&  ! isset($up_post)  )
