@@ -4,8 +4,14 @@
 		   <div class="cmt_div"> 
 			   <form class="create_comment" >
 				 {{csrf_field()}}
+
+				 
 					<input type="hidden" name="post_id" value="{{$post_id}}"  />
-					<input type="text" name="name" placeholder="name"/>
+				
+
+				<div class="form-group">
+					<input type="text" name="name" class="form-control" placeholder="name"/>
+				</div>
 					<input type="text" name="message" placeholder="type comment"/>
 					<button type="submit">comment</button>
 			   </form>

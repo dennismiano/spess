@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/email', function () {
+    return view('emails.confirm.co');
+});
+
 Route::get('logistics', function () {
     return view('logistics');
 });

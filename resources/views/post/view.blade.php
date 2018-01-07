@@ -44,27 +44,25 @@
 				{{--  End view update div --}}
 					
 				@if(isset($one)  )
-						<div class="">
-								<div class="row">
-									<div class="col-md-3">
+							
 										<img  class="img-responsive blogger-image"  src="data:image/jpeg;base64,<?php echo base64_encode( $one->files); ?>" />
-									</div>
+									
 
-									<div class="col-md-9  one_div">
+									
 										<h4>{{$one->title}}</h4>
 										<p>Posted {{$one->created_at->diffForHumans()}} by {{$one->name}}</p>
 										   
 										   
-										   Body:{{$one->body}}
+										   Body:{!!$one->body!!}
 										    
 										    Category:{{$one->category}}<br>
-										<a href="#" class="view_cmt" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$one->comments()->count()}})</span></a>&nbsp;&nbsp;
-										
-									</div>
-								</div>
-					</div>
-				@endif	
+										<a href="#" class="view_cmt" id="{{$one->id}}"><span class="blue"><i class="fa fa-commenting"></i> comments({{$one->comments()->count()}})</span></a>
+							
+
+					@endif	
+
 				    @if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )
+					
 					<div  class="one_post">
 						<h3><span class="blue"><i class="fa fa-plus-circle"></i> Create a new article</span></h3>
 							
@@ -99,8 +97,10 @@
 							 </form>
 					 </div>
 					 @endif
+
+				</div>
 			</div>
-	</div>
+
 	@if( isset($post)  && $post->isNotEmpty() && isset($cnt)  )	
 	<div class="col-md-5">
 		<div class="recent-blogs">

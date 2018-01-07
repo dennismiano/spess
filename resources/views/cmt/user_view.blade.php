@@ -1,29 +1,60 @@
 <div class="cmt_div"> 
 @if(isset($post_id))
 		   
-			   <form class="create_comment" >
-				 {{csrf_field()}}
+			<div class="comments-form-holder">
+				<div class="comments-wrapper">
+				   <form class="create_comment" >
+					 {{csrf_field()}}
 
-				<div class="form-group">
-					<input type="hidden" name="post_id"  class="form-control spess-text" value="{{$post_id}}"  />
+					 <input type="hidden" name="post_id"  class="form-control spess-text" value="{{$post_id}}"  />
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+					 		<input type="text" name="message" class="form-control spess-text" placeholder="type comment"/>
+					 	</div>
+					</div>
 				</div>
-					<input type="text" name="name" placeholder="name"/>
-					<input type="email" name="email" placeholder="email not made public"/>
-					<input type="text" name="message" placeholder="type comment"/>
-					<button type="submit">comment</button>
-			   </form>
-			  
-			   @if( isset($cmt)  && $cmt->isNotEmpty()  )
-				   @foreach( $cmt as $value)
-						<div class="comments">
-						{{$value->created_at->diffForHumans()}}<br>
-						{{$value->name}}<br>
-                        {{$value->message}}<br>
+
+				<div class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control spess-text" placeholder="name"/>
+							</div>
 						</div>
-				   @endforeach
-			   @else
-				   <p>No comments to display.</p>
-		    @endif
+
+						<div class="col-md-5">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control spess-text" placeholder="email not made public"/>
+							</div>
+						</div>
+
+						<div class="col-md-2">
+							<div class="form-group">
+								<button type="submit" class="btn btn-success">comment</button>
+							</div>
+						</div>
+					</div>
+
+				   </form>
+				  </div>
+				
+					  
+						   @if( isset($cmt)  && $cmt->isNotEmpty()  )
+							   @foreach( $cmt as $value)
+									<div class="comments">
+										<p class="spess-text">{{$value->message}}</p>
+										<p class="gray">{{$value->created_at->diffForHumans()}} by
+										{{$value->name}}</p>
+
+									</div>
+							   @endforeach
+						  	
+						  	@else
+							   <p>No comments to display.</p>
+					   		 @endif
+
+			</div>
 			
       
  @endif
