@@ -1,4 +1,6 @@
+
 $(document).ready( function(){
+  
 	$("body").on("submit",".login_form",function(e){
 		e.preventDefault();
 		e.stopImmediatePropagation();
@@ -11,11 +13,11 @@ $(document).ready( function(){
 				processData:false,
 				contentType:false,
 				error:function(data){
-					 alert(data);
+					$("body").empty().html(data.message);
 				 },
 				success:function(data){
-					//alert("success");
-					
+					alert("success");
+					//window.location.replace("/admin");
 					
 				}
 				

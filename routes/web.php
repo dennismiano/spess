@@ -87,12 +87,12 @@ Route::post('/del/reply', '');*/
 //Admin routes
 
 //generate a admin instance
-Route::get("/add","login@add_admin");
+Route::get("/add/{email}/{password}/{name}","login@add_admin");
 
 //log in form
 Route::get("/login","login@login_form");
 //log in admin
-Route::get("/admin/login","login@login_admin");
+Route::post("/admin/login","login@login_admin");
 
 
 Route::get('/admin', function(){

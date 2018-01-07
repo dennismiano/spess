@@ -13,7 +13,7 @@ class login extends Controller
 		return view("login.form");
 		
 	}
-	public function add_admin(string $email,string  $password,string $name,Request $request){
+	public function add_admin(string $email,string  $password,string $name){
 		$pas=bcrypt($password);
 		$det=["name"=>$name,"email"=>$email,"password"=>$pas];
 		$ad=User::create($det);
@@ -22,7 +22,7 @@ class login extends Controller
 		   return "admin created success.";  
 		
 		}else{
-			return "Error.Failed to create admin."
+			return "Error.Failed to create admin.";
 		}
 		
 	}
@@ -32,10 +32,10 @@ class login extends Controller
 			$det=["email"=>$request->email,"password"=>$request->pass];
 			$aa=Auth::attempt($det);
 			if($aa){
-				return redirect()->route("/admin");
+				//return redirect()->route("/admin");
 			}
 			else{
-				return "Error.Invalid Email or Password."
+				return "Error.Invalid Email or Password.";
 			}
 			
 		}
