@@ -109,3 +109,7 @@ Route::get('/admin', function(){
 Route::get('/admin/home', function(){
 	return view("admin.home");
 });
+//PrivacyPolicy for fb
+Route::get('/PrivacyPolicy', function(){
+	return view("policy.view");
+});

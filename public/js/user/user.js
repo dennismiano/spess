@@ -14,8 +14,11 @@ $(document).ready( function(){
 			error:function(data){
 				//$("#em_mod").modal("hide");
 				$("body").empty().html(data);
-			}
+			},
+			//add cache for fb sdk
+			cache: true
 	});
+	
 	//capture all links
 	$("body").on("click",".load_ajax",function(e){
 		e.preventDefault();
@@ -187,11 +190,35 @@ $("body").on("click",".u_view",function(e){
 		
 		
 }   );
+ 
+	//share link on facebook
+
+//share post on FB
+$("body").on("click","#fbli",function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation();
+	//Instantiate FB sdk
+	$.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+		FB.init({
+		  appId: '172507723356347',
+		  version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+		});
+	FB.ui({
+		  method: 'share',
+		  href: 'https://developers.facebook.com/docs/'
+		}, function(response){}   
+	);
+    
+	});
+	
+	 
+	
+});	
 
 
 	
-	
-	
-	
-
+ 
 }  );
+
+
+

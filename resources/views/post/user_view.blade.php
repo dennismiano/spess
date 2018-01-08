@@ -20,7 +20,7 @@
 										<div class="recent-blog-body load_cmt">
 											<p>{!!$post->first()->body!!}</p>
 											<a  class="u_view" id="{{$post->first()->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$post->first()->comments()->count()}})</span></a>
-										
+										    <a  id="fbli" href="#"><span class="blue"></i> fb</span></a>
 										</div>
 									</div>
 						</div>
@@ -53,6 +53,7 @@
 															
 															<span class="blue blog-thumbnail-links"><i class="fa fa-commenting " ></i> comments({{$value->comments()->count()}})</span>&nbsp;&nbsp;
 															<a  class="view_post blog-thumbnail-links" id="{{$value->id}}"><span class="blue"><i class="fa fa-commenting " ></i> View</span></a>
+															
 														</div>
 													</div>
 												</div>
