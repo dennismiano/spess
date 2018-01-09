@@ -19,8 +19,10 @@
 
 										<div class="recent-blog-body load_cmt">
 											<p>{!!$post->first()->body!!}</p>
-											<a  class="u_view" id="{{$post->first()->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$post->first()->comments()->count()}})</span></a>
-										    <a  id="fbli" href="#"><span class="blue"></i> fb</span></a>
+											<a  class="u_view" id="{{$post->first()->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$post->first()->comments()->count()}})</span></a>&nbsp;
+											<!-- Load Facebook SDK for JavaScript -->
+												  <a  href="#" class="fbclick">fb</a>
+												  <!-- Load Facebook SDK for JavaScript -->
 										</div>
 									</div>
 						</div>

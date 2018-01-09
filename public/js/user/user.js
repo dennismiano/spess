@@ -18,6 +18,14 @@ $(document).ready( function(){
 			//add cache for fb sdk
 			cache: true
 	});
+	//fb set facebook
+	$(function(d, s, id) {
+		   var js, fjs = d.getElementsByTagName(s)[0];
+		   if (d.getElementById(id)) return;
+		   js = d.createElement(s); js.id = id;
+		   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=172507723356347';
+		   fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	
 	//capture all links
 	$("body").on("click",".load_ajax",function(e){
@@ -194,26 +202,20 @@ $("body").on("click",".u_view",function(e){
 	//share link on facebook
 
 //share post on FB
-$("body").on("click","#fbli",function(e){
+$("body").on("click",".fbclick",function(e){
 	e.preventDefault();
-	e.stopImmediatePropagation();
-	//Instantiate FB sdk
-	$.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-		FB.init({
-		  appId: '172507723356347',
-		  version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-		});
+	 e.stopImmediatePropagation();
+	 var id=$(this).attr("id");
 	FB.ui({
-		  method: 'share',
-		  href: 'https://developers.facebook.com/docs/'
-		}, function(response){}   
-	);
-    
-	});
+    method: 'share',
+    display: 'popup',
+    href: 'http://127.0.0.1:80//user/view/blog/'+id,
+  }, function(response){});
 	
-	 
 	
-});	
+	
+});
+
 
 
 	
