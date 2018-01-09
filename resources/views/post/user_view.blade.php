@@ -21,7 +21,7 @@
 											<p>{!!$post->first()->body!!}</p>
 											<a  class="u_view" id="{{$post->first()->id}}"><span class="blue"><i class="fa fa-commenting " ></i> comments({{$post->first()->comments()->count()}})</span></a>&nbsp;
 											<!-- Load Facebook SDK for JavaScript -->
-												  <a  href="#" class="fbclick">fb</a>
+												  <a  href="#" class="fbclick" id="{{$post()->first()->id}}">fb</a>
 												  <!-- Load Facebook SDK for JavaScript -->
 										</div>
 									</div>
