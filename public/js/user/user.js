@@ -209,7 +209,7 @@ $("body").on("click",".fbclick",function(e){
 	FB.ui({
     method: 'share',
     display: 'popup',
-    href: 'http://127.0.0.1:80//user/view/blog/'+id,
+    href: 'http://user/view/blog/{id}'+id,
   }, function(response){});
 	
 	
