@@ -209,7 +209,7 @@ $("body").on("click",".fbclick",function(e){
 	FB.ui({
     method: 'share',
     display: 'popup',
-    href: 'http://user/view/blog/{id}'+id,
+    href: 'http://spess.sharubati.com/user/view/blog/{id}'+id,
   }, function(response){});
 	
 	
