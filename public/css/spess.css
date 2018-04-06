@@ -19,6 +19,7 @@
 .bold{
 	font-weight: 600;
 }
+
 .spess-header{
 	border-top:10px solid #00acef;
 	border-bottom:1px solid #ebebeb;
@@ -578,6 +579,10 @@
 	.blog-image{
 		height:500px;
 	}
+}
+.no-posts{
+	padding-top: 50px;
+
 }
 /********************************************************ADMIN STYLING************************/
 .admin-header{

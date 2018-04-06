@@ -66,7 +66,22 @@
 					 </div>
 				   @else
 					   @if(  ! isset($one)   )
-					   <p>No posts yet.</p>
+					   			<div class="row">
+							   		<div class="container">
+								   		<div class="no-posts">
+								   			<div class="col-md-8 col-md-offset-2">
+								   				<div class="col-md-2">
+									   				<img class="no-post"  src = "{{ URL::asset('/images/empty-folder.png')}}">
+									   			</div>
+
+									   			<div class="col-md-10">
+									   				<h3>No posts have been made yet!</h3>
+									   				<p>Seems like the web admin has not made a post yet, check out later for content.<b>Thanks</b></p>
+									   			</div>
+									   		</div>
+								   		</div>
+								   	</div>
+							   	</div>
 				       @endif
 				   
 				</div>
