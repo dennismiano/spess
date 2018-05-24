@@ -113,7 +113,7 @@
                                 <div class="spess-slider-text">
                                     <h2>Plant & Machinery</h2>
                                     <img class="border-bottom"  src = "{{ URL::asset('/images/border-bottom.png')}}">
-                                    <h1><span class="red">GRADERS, DOZERS, BACKHOES COMPACTORS FOR HIRE</span></h1>
+                                    <h1><span class="red">GRADERS, DOZERS, BACKHOES, CRANES AND FORKLIFT SERVICES</span></h1>
                                      <button class="spess-cta"  data-toggle="modal" data-target="#q_modal">Get a Quote <i class="fa fa-chevron-circle-right"></i></button>
                                 </div>
                             </div>
@@ -298,7 +298,7 @@
 
                                             <div class="col-md-6">
                                                 <div class="contacts-wrapper">
-                                                    <p><i class="fa fa-phone-square"></i><b> Cell:</b> +254 742 360 766<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 211 181<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 724 723 980<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 190 456<br><b><i class="fa fa-envelope"></i> Email:</b> info@spessltd.com</p>
+                                                    <p><i class="fa fa-phone-square"></i><b> Cell:</b> +254 742 360 766<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 710 211 181<br><i class="fa fa-phone-square"></i><b> Cell:</b> +254 724 723 980<br><b><i class="fa fa-envelope"></i> Email:</b> info@spessltd.com</p>
                                                 </div>
                                             </div>
                                         </div>
